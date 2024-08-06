@@ -1,0 +1,182 @@
+{
+  "main": {
+    "id": "4a4b24d5ab8540d4",
+    "type": "split",
+    "children": [
+      {
+        "id": "32196930c1bfac81",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "156069c5f8a79d0a",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Home.md",
+                "mode": "preview",
+                "source": false
+              },
+              "pinned": true
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "801e12e627b09aff",
+    "type": "split",
+    "children": [
+      {
+        "id": "2090625af8f62188",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "27d311ffd4c34f46",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "95820152d789a3e0",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "d2d044004351b8a9",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "7e4bf38ae86b4733",
+    "type": "split",
+    "children": [
+      {
+        "id": "8951f61bf9fd1e99",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "259c25931fbc2d46",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Home.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "10fc915353232153",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Home.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "038febe29e58cac7",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "9bf4f45c0e5aed04",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Home.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "templater-obsidian:Templater": false
+    }
+  },
+  "active": "156069c5f8a79d0a",
+  "lastOpenFiles": [
+    "Problems/1.two-sum/1.two-sum.md",
+    "Home.md",
+    "README.md",
+    "_assets/demo5.png",
+    "_assets/demo4.png",
+    "_assets/demo3.png",
+    "_assets/demo2.png",
+    "_assets/demo1.png",
+    "_assets/1.png",
+    "_assets/Pasted image 20240806233206.png",
+    "Problems/1.two-sum/solution1.md",
+    "_templates/leetcode-solution模板.md",
+    "_templates/leetcode-note模板.md",
+    "Problems/1.two-sum/solution.md",
+    "Problems/1.two-sum/note.md",
+    "Problems/2.add-two-numbers/2.add-two-numbers.md",
+    "_templates",
+    "_assets/Pasted image 20240806232422.png",
+    "_assets/Pasted image 20240806232410.png",
+    "_assets/Pasted image 20240806232339.png",
+    "README-zh.md",
+    "_assets",
+    "_tags/lc-favorite/default.md",
+    "_tags/lc-topic/array.md",
+    "_scripts/dv_pagingTable.js",
+    "_scripts",
+    "刷题资料.md"
+  ]
+}

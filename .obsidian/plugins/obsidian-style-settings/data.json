@@ -1,0 +1,9 @@
+{
+  "blue-topaz-theme@@color-scheme-options": "color-scheme-options-avocado-topaz",
+  "blue-topaz-theme@@left-ribbon-style": "hide-left-ribbon",
+  "blue-topaz-theme@@layout-style-options": "bt-bubble-layout",
+  "blue-topaz-theme@@bt-bubble-layout-padding": "2px",
+  "blue-topaz-theme@@bt-bubble-radius": "8px",
+  "blue-topaz-theme@@bt-bubble-layout-hide-borders": true,
+  "blue-topaz-theme@@bt-bubble-not-file-tree": false
+}
