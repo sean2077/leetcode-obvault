@@ -4,18 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "d75c443c5e7bf4f9",
+        "id": "3fc9773ba7ed6e49",
         "type": "tabs",
         "children": [
           {
-            "id": "0486f67e7b6fd4a8",
+            "id": "81e451e29e98bbf1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "Home.md",
                 "mode": "preview",
-                "source": false
+                "source": true
               }
             }
           }
@@ -147,10 +147,10 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "0486f67e7b6fd4a8",
+  "active": "81e451e29e98bbf1",
   "lastOpenFiles": [
-    "Problems/1.two-sum/1.two-sum.md",
     "Home.md",
+    "Problems/1.two-sum/1.two-sum.md",
     "Problems/1.two-sum/solution.md",
     "Problems/1.two-sum/note.md",
     "Problems/1.two-sum/solution1.md",

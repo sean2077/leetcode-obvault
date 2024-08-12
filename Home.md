@@ -15,7 +15,7 @@ const header = ["题号", "标题", "标题(中)", "分类", "难度", "通过�
 
 // 获取初始数据
 let initialData = dv.pages("#leetcode/problem")
-    .sort((p) => [parseInt(p.questionId)])
+    .sort((p) => [parseInt(p.questionId) || 100000000, p.questionId])
     .map((p) => [p.file.link, p.title, p.translatedTitle, p.lcTopics, p.lcDifficulty, p.lcAcRate, p.grade, p.solutions, p.notes, p.favorites])
     .array();
 
