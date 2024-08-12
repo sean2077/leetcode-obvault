@@ -4,21 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "32196930c1bfac81",
+        "id": "d75c443c5e7bf4f9",
         "type": "tabs",
         "children": [
           {
-            "id": "156069c5f8a79d0a",
+            "id": "0486f67e7b6fd4a8",
             "type": "leaf",
-            "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
                 "file": "Home.md",
                 "mode": "preview",
                 "source": false
-              },
-              "pinned": true
+              }
             }
           }
         ]
@@ -149,10 +147,14 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "156069c5f8a79d0a",
+  "active": "0486f67e7b6fd4a8",
   "lastOpenFiles": [
     "Problems/1.two-sum/1.two-sum.md",
     "Home.md",
+    "Problems/1.two-sum/solution.md",
+    "Problems/1.two-sum/note.md",
+    "Problems/1.two-sum/solution1.md",
+    "Problems/2.add-two-numbers/2.add-two-numbers.md",
     "README.md",
     "_assets/demo5.png",
     "_assets/demo4.png",
@@ -161,12 +163,8 @@
     "_assets/demo1.png",
     "_assets/1.png",
     "_assets/Pasted image 20240806233206.png",
-    "Problems/1.two-sum/solution1.md",
     "_templates/leetcode-solution模板.md",
     "_templates/leetcode-note模板.md",
-    "Problems/1.two-sum/solution.md",
-    "Problems/1.two-sum/note.md",
-    "Problems/2.add-two-numbers/2.add-two-numbers.md",
     "_templates",
     "_assets/Pasted image 20240806232422.png",
     "_assets/Pasted image 20240806232410.png",
