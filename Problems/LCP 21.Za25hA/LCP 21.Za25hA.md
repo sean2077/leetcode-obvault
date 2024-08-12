@@ -9,7 +9,8 @@ aliases:
   - 追逐游戏
   - Za25hA
   - 追逐游戏
-lcLink: https://leetcode.com/problems/Za25hA/
+lcLinks:
+  - https://leetcode.cn/problems/Za25hA/
 lcTopics:
   - '[[depth-first-search]]'
   - '[[breadth-first-search]]'
@@ -25,7 +26,7 @@ favorites: []
 solutions: []
 notes: []
 cssclasses: []
-created: 2024-08-13 00:10
+created: 2024-08-13 00:28
 updated:
 ---
 

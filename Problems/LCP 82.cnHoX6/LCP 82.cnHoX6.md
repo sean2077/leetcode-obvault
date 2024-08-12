@@ -9,7 +9,8 @@ aliases:
   - 万灵之树
   - cnHoX6
   - 万灵之树
-lcLink: https://leetcode.com/problems/cnHoX6/
+lcLinks:
+  - https://leetcode.cn/problems/cnHoX6/
 lcTopics: []
 lcDifficulty: Hard
 lcAcRate: 19.6%
@@ -21,7 +22,7 @@ favorites: []
 solutions: []
 notes: []
 cssclasses: []
-created: 2024-08-13 00:10
+created: 2024-08-13 00:28
 updated:
 ---
 

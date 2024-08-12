@@ -9,7 +9,8 @@ aliases:
   - 搭桥过河
   - NfY1m5
   - 搭桥过河
-lcLink: https://leetcode.com/problems/NfY1m5/
+lcLinks:
+  - https://leetcode.cn/problems/NfY1m5/
 lcTopics:
   - '[[array]]'
   - '[[dynamic-programming]]'
@@ -23,7 +24,7 @@ favorites: []
 solutions: []
 notes: []
 cssclasses: []
-created: 2024-08-13 00:10
+created: 2024-08-13 00:28
 updated:
 ---
 

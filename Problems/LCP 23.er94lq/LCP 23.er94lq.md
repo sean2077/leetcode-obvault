@@ -9,7 +9,8 @@ aliases:
   - 魔术排列
   - er94lq
   - 魔术排列
-lcLink: https://leetcode.com/problems/er94lq/
+lcLinks:
+  - https://leetcode.cn/problems/er94lq/
 lcTopics:
   - '[[queue]]'
   - '[[array]]'
@@ -24,7 +25,7 @@ favorites: []
 solutions: []
 notes: []
 cssclasses: []
-created: 2024-08-13 00:10
+created: 2024-08-13 00:28
 updated:
 ---
 

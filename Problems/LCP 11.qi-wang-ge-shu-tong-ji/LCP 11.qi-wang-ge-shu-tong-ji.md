@@ -9,7 +9,8 @@ aliases:
   - 期望个数统计
   - qi-wang-ge-shu-tong-ji
   - 期望个数统计
-lcLink: https://leetcode.com/problems/qi-wang-ge-shu-tong-ji/
+lcLinks:
+  - https://leetcode.cn/problems/qi-wang-ge-shu-tong-ji/
 lcTopics:
   - '[[array]]'
   - '[[hash-table]]'
@@ -25,7 +26,7 @@ favorites: []
 solutions: []
 notes: []
 cssclasses: []
-created: 2024-08-13 00:10
+created: 2024-08-13 00:28
 updated:
 ---
 

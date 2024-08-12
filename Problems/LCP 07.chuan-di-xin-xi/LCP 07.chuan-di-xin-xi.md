@@ -9,7 +9,8 @@ aliases:
   - 传递信息
   - chuan-di-xin-xi
   - 传递信息
-lcLink: https://leetcode.com/problems/chuan-di-xin-xi/
+lcLinks:
+  - https://leetcode.cn/problems/chuan-di-xin-xi/
 lcTopics:
   - '[[depth-first-search]]'
   - '[[breadth-first-search]]'
@@ -25,7 +26,7 @@ favorites: []
 solutions: []
 notes: []
 cssclasses: []
-created: 2024-08-13 00:10
+created: 2024-08-13 00:28
 updated:
 ---
 

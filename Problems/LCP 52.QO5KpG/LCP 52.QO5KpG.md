@@ -9,7 +9,8 @@ aliases:
   - 二叉搜索树染色
   - QO5KpG
   - 二叉搜索树染色
-lcLink: https://leetcode.com/problems/QO5KpG/
+lcLinks:
+  - https://leetcode.cn/problems/QO5KpG/
 lcTopics:
   - '[[tree]]'
   - '[[segment-tree]]'
@@ -28,7 +29,7 @@ favorites: []
 solutions: []
 notes: []
 cssclasses: []
-created: 2024-08-13 00:10
+created: 2024-08-13 00:28
 updated:
 ---
 

@@ -9,13 +9,14 @@ aliases:
   - 主题空间
   - YesdPw
   - 主题空间
-lcLink: https://leetcode.com/problems/YesdPw/
+lcLinks:
+  - https://leetcode.cn/problems/YesdPw/
 lcTopics:
-  - '[[depth-first-search]]'
-  - '[[breadth-first-search]]'
-  - '[[union-find]]'
-  - '[[array]]'
-  - '[[matrix]]'
+  - "[[depth-first-search]]"
+  - "[[breadth-first-search]]"
+  - "[[union-find]]"
+  - "[[array]]"
+  - "[[matrix]]"
 lcDifficulty: Medium
 lcAcRate: 41.1%
 similarQuestions: []
@@ -26,8 +27,8 @@ favorites: []
 solutions: []
 notes: []
 cssclasses: []
-created: 2024-08-13 00:10
-updated:
+created: 2024-08-13 00:28
+updated: 
 ---
 
 **Nav:** << previous: [[LCS 02.WqXACV]] | next: [[面试题 01.01.is-unique-lcci]] >>

@@ -9,7 +9,8 @@ aliases:
   - 信物传送
   - 6UEx57
   - 信物传送
-lcLink: https://leetcode.com/problems/6UEx57/
+lcLinks:
+  - https://leetcode.cn/problems/6UEx57/
 lcTopics:
   - '[[breadth-first-search]]'
   - '[[graph]]'
@@ -27,7 +28,7 @@ favorites: []
 solutions: []
 notes: []
 cssclasses: []
-created: 2024-08-13 00:10
+created: 2024-08-13 00:28
 updated:
 ---
 

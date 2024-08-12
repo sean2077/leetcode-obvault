@@ -9,7 +9,8 @@ aliases:
   - 游乐园的游览计划
   - you-le-yuan-de-you-lan-ji-hua
   - 游乐园的游览计划
-lcLink: https://leetcode.com/problems/you-le-yuan-de-you-lan-ji-hua/
+lcLinks:
+  - https://leetcode.cn/problems/you-le-yuan-de-you-lan-ji-hua/
 lcTopics:
   - '[[graph]]'
   - '[[geometry]]'
@@ -24,7 +25,7 @@ favorites: []
 solutions: []
 notes: []
 cssclasses: []
-created: 2024-08-13 00:10
+created: 2024-08-13 00:28
 updated:
 ---
 

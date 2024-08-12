@@ -9,7 +9,8 @@ aliases:
   - 最小展台数量
   - 600YaG
   - 最小展台数量
-lcLink: https://leetcode.com/problems/600YaG/
+lcLinks:
+  - https://leetcode.cn/problems/600YaG/
 lcTopics:
   - '[[array]]'
   - '[[hash-table]]'
@@ -25,7 +26,7 @@ favorites: []
 solutions: []
 notes: []
 cssclasses: []
-created: 2024-08-13 00:10
+created: 2024-08-13 00:28
 updated:
 ---
 

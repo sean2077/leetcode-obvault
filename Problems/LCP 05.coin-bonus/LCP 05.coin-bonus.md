@@ -9,7 +9,8 @@ aliases:
   - Coin Bonus
   - coin-bonus
   - 发 LeetCoin
-lcLink: https://leetcode.com/problems/coin-bonus/
+lcLinks:
+  - https://leetcode.cn/problems/coin-bonus/
 lcTopics:
   - '[[binary-indexed-tree]]'
   - '[[segment-tree]]'
@@ -24,7 +25,7 @@ favorites: []
 solutions: []
 notes: []
 cssclasses: []
-created: 2024-08-13 00:10
+created: 2024-08-13 00:28
 updated:
 ---
 

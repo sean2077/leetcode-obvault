@@ -9,7 +9,8 @@ aliases:
   - 采集果实
   - PTXy4P
   - 采集果实
-lcLink: https://leetcode.com/problems/PTXy4P/
+lcLinks:
+  - https://leetcode.cn/problems/PTXy4P/
 lcTopics:
   - '[[array]]'
 lcDifficulty: Easy
@@ -22,7 +23,7 @@ favorites: []
 solutions: []
 notes: []
 cssclasses: []
-created: 2024-08-13 00:10
+created: 2024-08-13 00:28
 updated:
 ---
 

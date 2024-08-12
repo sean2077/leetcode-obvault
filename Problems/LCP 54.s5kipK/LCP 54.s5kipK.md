@@ -9,7 +9,8 @@ aliases:
   - 夺回据点
   - s5kipK
   - 夺回据点
-lcLink: https://leetcode.com/problems/s5kipK/
+lcLinks:
+  - https://leetcode.cn/problems/s5kipK/
 lcTopics:
   - '[[graph]]'
   - '[[array]]'
@@ -24,7 +25,7 @@ favorites: []
 solutions: []
 notes: []
 cssclasses: []
-created: 2024-08-13 00:10
+created: 2024-08-13 00:28
 updated:
 ---
 

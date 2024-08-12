@@ -9,7 +9,8 @@ aliases:
   - 最多牌组数
   - Up5XYM
   - 最多牌组数
-lcLink: https://leetcode.com/problems/Up5XYM/
+lcLinks:
+  - https://leetcode.cn/problems/Up5XYM/
 lcTopics:
   - '[[array]]'
   - '[[dynamic-programming]]'
@@ -24,7 +25,7 @@ favorites: []
 solutions: []
 notes: []
 cssclasses: []
-created: 2024-08-13 00:10
+created: 2024-08-13 00:28
 updated:
 ---
 

@@ -9,7 +9,8 @@ aliases:
   - 古董键盘
   - Uh984O
   - 古董键盘
-lcLink: https://leetcode.com/problems/Uh984O/
+lcLinks:
+  - https://leetcode.cn/problems/Uh984O/
 lcTopics:
   - '[[math]]'
   - '[[dynamic-programming]]'
@@ -24,7 +25,7 @@ favorites: []
 solutions: []
 notes: []
 cssclasses: []
-created: 2024-08-13 00:10
+created: 2024-08-13 00:28
 updated:
 ---
 

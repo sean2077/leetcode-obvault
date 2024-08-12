@@ -9,7 +9,8 @@ aliases:
   - 早餐组合
   - 2vYnGI
   - 早餐组合
-lcLink: https://leetcode.com/problems/2vYnGI/
+lcLinks:
+  - https://leetcode.cn/problems/2vYnGI/
 lcTopics:
   - '[[array]]'
   - '[[two-pointers]]'
@@ -25,7 +26,7 @@ favorites: []
 solutions: []
 notes: []
 cssclasses: []
-created: 2024-08-13 00:10
+created: 2024-08-13 00:28
 updated:
 ---
 

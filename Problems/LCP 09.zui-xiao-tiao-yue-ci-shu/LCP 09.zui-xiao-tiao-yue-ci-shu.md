@@ -9,7 +9,8 @@ aliases:
   - 最小跳跃次数
   - zui-xiao-tiao-yue-ci-shu
   - 最小跳跃次数
-lcLink: https://leetcode.com/problems/zui-xiao-tiao-yue-ci-shu/
+lcLinks:
+  - https://leetcode.cn/problems/zui-xiao-tiao-yue-ci-shu/
 lcTopics:
   - '[[breadth-first-search]]'
   - '[[segment-tree]]'
@@ -25,7 +26,7 @@ favorites: []
 solutions: []
 notes: []
 cssclasses: []
-created: 2024-08-13 00:10
+created: 2024-08-13 00:28
 updated:
 ---
 

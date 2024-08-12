@@ -9,7 +9,8 @@ aliases:
   - 黑盒光线反射
   - IQvJ9i
   - 黑盒光线反射
-lcLink: https://leetcode.com/problems/IQvJ9i/
+lcLinks:
+  - https://leetcode.cn/problems/IQvJ9i/
 lcTopics:
   - '[[design]]'
   - '[[segment-tree]]'
@@ -25,7 +26,7 @@ favorites: []
 solutions: []
 notes: []
 cssclasses: []
-created: 2024-08-13 00:10
+created: 2024-08-13 00:28
 updated:
 ---
 

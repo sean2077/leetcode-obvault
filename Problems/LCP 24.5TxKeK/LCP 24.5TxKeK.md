@@ -9,7 +9,8 @@ aliases:
   - 数字游戏
   - 5TxKeK
   - 数字游戏
-lcLink: https://leetcode.com/problems/5TxKeK/
+lcLinks:
+  - https://leetcode.cn/problems/5TxKeK/
 lcTopics:
   - '[[array]]'
   - '[[math]]'
@@ -24,7 +25,7 @@ favorites: []
 solutions: []
 notes: []
 cssclasses: []
-created: 2024-08-13 00:10
+created: 2024-08-13 00:28
 updated:
 ---
 

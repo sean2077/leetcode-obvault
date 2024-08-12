@@ -9,7 +9,8 @@ aliases:
   - Guess Numbers
   - guess-numbers
   - 猜数字
-lcLink: https://leetcode.com/problems/guess-numbers/
+lcLinks:
+  - https://leetcode.cn/problems/guess-numbers/
 lcTopics:
   - '[[array]]'
 lcDifficulty: Easy
@@ -22,7 +23,7 @@ favorites: []
 solutions: []
 notes: []
 cssclasses: []
-created: 2024-08-13 00:10
+created: 2024-08-13 00:28
 updated:
 ---
 

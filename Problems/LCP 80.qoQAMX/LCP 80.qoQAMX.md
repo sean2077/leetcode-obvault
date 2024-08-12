@@ -9,7 +9,8 @@ aliases:
   - 生物进化录
   - qoQAMX
   - 生物进化录
-lcLink: https://leetcode.com/problems/qoQAMX/
+lcLinks:
+  - https://leetcode.cn/problems/qoQAMX/
 lcTopics: []
 lcDifficulty: Hard
 lcAcRate: 52.6%
@@ -21,7 +22,7 @@ favorites: []
 solutions: []
 notes: []
 cssclasses: []
-created: 2024-08-13 00:10
+created: 2024-08-13 00:28
 updated:
 ---
 

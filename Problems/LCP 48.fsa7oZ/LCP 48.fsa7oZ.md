@@ -9,7 +9,8 @@ aliases:
   - 无限棋局
   - fsa7oZ
   - 无限棋局
-lcLink: https://leetcode.com/problems/fsa7oZ/
+lcLinks:
+  - https://leetcode.cn/problems/fsa7oZ/
 lcTopics:
   - '[[array]]'
   - '[[math]]'
@@ -25,7 +26,7 @@ favorites: []
 solutions: []
 notes: []
 cssclasses: []
-created: 2024-08-13 00:10
+created: 2024-08-13 00:28
 updated:
 ---
 

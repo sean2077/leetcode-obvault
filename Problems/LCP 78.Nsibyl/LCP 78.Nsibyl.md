@@ -9,7 +9,8 @@ aliases:
   - 城墙防线
   - Nsibyl
   - 城墙防线
-lcLink: https://leetcode.com/problems/Nsibyl/
+lcLinks:
+  - https://leetcode.cn/problems/Nsibyl/
 lcTopics: []
 lcDifficulty: Medium
 lcAcRate: 45.3%
@@ -21,7 +22,7 @@ favorites: []
 solutions: []
 notes: []
 cssclasses: []
-created: 2024-08-13 00:10
+created: 2024-08-13 00:28
 updated:
 ---
 

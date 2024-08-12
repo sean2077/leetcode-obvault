@@ -9,7 +9,8 @@ aliases:
   - 装饰树
   - KnLfVT
   - 装饰树
-lcLink: https://leetcode.com/problems/KnLfVT/
+lcLinks:
+  - https://leetcode.cn/problems/KnLfVT/
 lcTopics:
   - '[[tree]]'
   - '[[depth-first-search]]'
@@ -25,7 +26,7 @@ favorites: []
 solutions: []
 notes: []
 cssclasses: []
-created: 2024-08-13 00:10
+created: 2024-08-13 00:28
 updated:
 ---
 

@@ -9,7 +9,8 @@ aliases:
   - 开幕式焰火
   - sZ59z6
   - 开幕式焰火
-lcLink: https://leetcode.com/problems/sZ59z6/
+lcLinks:
+  - https://leetcode.cn/problems/sZ59z6/
 lcTopics:
   - '[[tree]]'
   - '[[depth-first-search]]'
@@ -26,7 +27,7 @@ favorites: []
 solutions: []
 notes: []
 cssclasses: []
-created: 2024-08-13 00:10
+created: 2024-08-13 00:28
 updated:
 ---
 

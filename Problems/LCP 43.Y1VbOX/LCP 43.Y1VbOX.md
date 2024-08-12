@@ -9,7 +9,8 @@ aliases:
   - 十字路口的交通
   - Y1VbOX
   - 十字路口的交通
-lcLink: https://leetcode.com/problems/Y1VbOX/
+lcLinks:
+  - https://leetcode.cn/problems/Y1VbOX/
 lcTopics:
   - '[[array]]'
   - '[[string]]'
@@ -24,7 +25,7 @@ favorites: []
 solutions: []
 notes: []
 cssclasses: []
-created: 2024-08-13 00:10
+created: 2024-08-13 00:28
 updated:
 ---
 

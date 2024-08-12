@@ -9,7 +9,8 @@ aliases:
   - 二叉树灯饰
   - U7WvvU
   - 二叉树灯饰
-lcLink: https://leetcode.com/problems/U7WvvU/
+lcLinks:
+  - https://leetcode.cn/problems/U7WvvU/
 lcTopics:
   - '[[tree]]'
   - '[[depth-first-search]]'
@@ -25,7 +26,7 @@ favorites: []
 solutions: []
 notes: []
 cssclasses: []
-created: 2024-08-13 00:10
+created: 2024-08-13 00:28
 updated:
 ---
 

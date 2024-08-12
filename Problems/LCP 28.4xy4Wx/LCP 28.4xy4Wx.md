@@ -9,7 +9,8 @@ aliases:
   - 采购方案
   - 4xy4Wx
   - 采购方案
-lcLink: https://leetcode.com/problems/4xy4Wx/
+lcLinks:
+  - https://leetcode.cn/problems/4xy4Wx/
 lcTopics:
   - '[[array]]'
   - '[[two-pointers]]'
@@ -25,7 +26,7 @@ favorites: []
 solutions: []
 notes: []
 cssclasses: []
-created: 2024-08-13 00:10
+created: 2024-08-13 00:28
 updated:
 ---
 

@@ -9,7 +9,8 @@ aliases:
   - Programmable Robot
   - programmable-robot
   - 机器人大冒险
-lcLink: https://leetcode.com/problems/programmable-robot/
+lcLinks:
+  - https://leetcode.cn/problems/programmable-robot/
 lcTopics:
   - '[[array]]'
   - '[[hash-table]]'
@@ -24,7 +25,7 @@ favorites: []
 solutions: []
 notes: []
 cssclasses: []
-created: 2024-08-13 00:10
+created: 2024-08-13 00:28
 updated:
 ---
 

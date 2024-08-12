@@ -9,7 +9,8 @@ aliases:
   - 变换的迷宫
   - Db3wC1
   - 变换的迷宫
-lcLink: https://leetcode.com/problems/Db3wC1/
+lcLinks:
+  - https://leetcode.cn/problems/Db3wC1/
 lcTopics:
   - '[[depth-first-search]]'
   - '[[breadth-first-search]]'
@@ -26,7 +27,7 @@ favorites: []
 solutions: []
 notes: []
 cssclasses: []
-created: 2024-08-13 00:10
+created: 2024-08-13 00:28
 updated:
 ---
 

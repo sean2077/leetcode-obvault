@@ -9,7 +9,8 @@ aliases:
   - Deep Dark Fraction
   - deep-dark-fraction
   - 分式化简
-lcLink: https://leetcode.com/problems/deep-dark-fraction/
+lcLinks:
+  - https://leetcode.cn/problems/deep-dark-fraction/
 lcTopics:
   - '[[array]]'
   - '[[math]]'
@@ -25,7 +26,7 @@ favorites: []
 solutions: []
 notes: []
 cssclasses: []
-created: 2024-08-13 00:10
+created: 2024-08-13 00:28
 updated:
 ---
 

@@ -9,7 +9,8 @@ aliases:
   - Hello LeetCode!
   - rMeRt2
   - Hello LeetCode!
-lcLink: https://leetcode.com/problems/rMeRt2/
+lcLinks:
+  - https://leetcode.cn/problems/rMeRt2/
 lcTopics:
   - '[[bit-manipulation]]'
   - '[[array]]'
@@ -26,7 +27,7 @@ favorites: []
 solutions: []
 notes: []
 cssclasses: []
-created: 2024-08-13 00:10
+created: 2024-08-13 00:28
 updated:
 ---
 

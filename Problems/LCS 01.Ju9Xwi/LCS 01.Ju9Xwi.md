@@ -9,7 +9,8 @@ aliases:
   - 下载插件
   - Ju9Xwi
   - 下载插件
-lcLink: https://leetcode.com/problems/Ju9Xwi/
+lcLinks:
+  - https://leetcode.cn/problems/Ju9Xwi/
 lcTopics:
   - '[[greedy]]'
   - '[[math]]'
@@ -24,7 +25,7 @@ favorites: []
 solutions: []
 notes: []
 cssclasses: []
-created: 2024-08-13 00:10
+created: 2024-08-13 00:28
 updated:
 ---
 

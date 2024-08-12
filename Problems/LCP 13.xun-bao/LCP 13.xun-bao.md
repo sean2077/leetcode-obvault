@@ -9,7 +9,8 @@ aliases:
   - 寻宝
   - xun-bao
   - 寻宝
-lcLink: https://leetcode.com/problems/xun-bao/
+lcLinks:
+  - https://leetcode.cn/problems/xun-bao/
 lcTopics:
   - '[[bit-manipulation]]'
   - '[[breadth-first-search]]'
@@ -27,7 +28,7 @@ favorites: []
 solutions: []
 notes: []
 cssclasses: []
-created: 2024-08-13 00:10
+created: 2024-08-13 00:28
 updated:
 ---
 

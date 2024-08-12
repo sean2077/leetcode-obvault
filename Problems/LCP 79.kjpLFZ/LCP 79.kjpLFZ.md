@@ -9,7 +9,8 @@ aliases:
   - 提取咒文
   - kjpLFZ
   - 提取咒文
-lcLink: https://leetcode.com/problems/kjpLFZ/
+lcLinks:
+  - https://leetcode.cn/problems/kjpLFZ/
 lcTopics: []
 lcDifficulty: Medium
 lcAcRate: 30.3%
@@ -21,7 +22,7 @@ favorites: []
 solutions: []
 notes: []
 cssclasses: []
-created: 2024-08-13 00:10
+created: 2024-08-13 00:28
 updated:
 ---
 
