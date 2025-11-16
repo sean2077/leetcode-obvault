@@ -1,0 +1,108 @@
+{
+  "enabled": true,
+  "statusBarEnabled": true,
+  "blurDepth": 0,
+  "brightness4Bg": 1,
+  "saturate4Bg": 1,
+  "bgColorLight": "#c8c8c8",
+  "bgColorOpacityLight": 0.32,
+  "bgColorDark": "#1f1e1e",
+  "bgColorOpacityDark": 0.38,
+  "bgSize": "cover",
+  "mode": "time-based",
+  "timeRules": [
+    {
+      "id": "morning",
+      "name": "清晨",
+      "startTime": "06:00",
+      "endTime": "09:00",
+      "backgroundId": "1757342225416-5",
+      "enabled": true
+    },
+    {
+      "id": "later-morning",
+      "name": "上午",
+      "startTime": "09:00",
+      "endTime": "11:00",
+      "backgroundId": "1757342225416-4",
+      "enabled": true
+    },
+    {
+      "id": "noon",
+      "name": "中午",
+      "startTime": "11:00",
+      "endTime": "13:00",
+      "backgroundId": "1757342225416-3",
+      "enabled": true
+    },
+    {
+      "id": "afternoon",
+      "name": "下午",
+      "startTime": "13:00",
+      "endTime": "17:00",
+      "backgroundId": "1757342225416-2",
+      "enabled": true
+    },
+    {
+      "id": "dusk",
+      "name": "黄昏",
+      "startTime": "17:00",
+      "endTime": "19:00",
+      "backgroundId": "1757342225416-1",
+      "enabled": true
+    },
+    {
+      "id": "night",
+      "name": "夜晚",
+      "startTime": "19:00",
+      "endTime": "06:00",
+      "backgroundId": "1757342225416-0",
+      "enabled": true
+    }
+  ],
+  "intervalMinutes": 60,
+  "localBackgroundFolder": "9Z 系统区/背景",
+  "backgrounds": [
+    {
+      "id": "1757342225416-5",
+      "name": "清晨 (A day in the corner of the city)",
+      "type": "image",
+      "value": "bgs/A day in the corner of the city/清晨.png"
+    },
+    {
+      "id": "1757342225416-4",
+      "name": "上午 (A day in the corner of the city)",
+      "type": "image",
+      "value": "bgs/A day in the corner of the city/上午.png"
+    },
+    {
+      "id": "1757342225416-3",
+      "name": "中午 (A day in the corner of the city)",
+      "type": "image",
+      "value": "bgs/A day in the corner of the city/中午.jpg"
+    },
+    {
+      "id": "1757342225416-2",
+      "name": "下午 (A day in the corner of the city)",
+      "type": "image",
+      "value": "bgs/A day in the corner of the city/下午.png"
+    },
+    {
+      "id": "1757342225416-1",
+      "name": "黄昏 (A day in the corner of the city)",
+      "type": "image",
+      "value": "bgs/A day in the corner of the city/黄昏.jpg"
+    },
+    {
+      "id": "1757342225416-0",
+      "name": "夜晚 (A day in the corner of the city)",
+      "type": "image",
+      "value": "bgs/A day in the corner of the city/夜晚.jpg"
+    }
+  ],
+  "currentIndex": 4,
+  "enableRandomWallpaper": true,
+  "wallpaperApis": [],
+  "bgColor": "#1f1e1e",
+  "bgColorOpacity": 0.32
+}

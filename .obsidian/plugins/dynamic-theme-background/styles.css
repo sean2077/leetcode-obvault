@@ -1,0 +1,1134 @@
+/* =============================================================================
+   Obsidian 动态主题背景插件样式 
+   Dynamic Theme Background Plugin Styles
+   
+   包含了插件中广泛使用的通用样式组件。所有样式都使用 dtb- 前缀以避免命名冲突。
+   
+    主要组件分类：
+     ┌─────────────────────────────────────────────────────────────────────────
+     │ 🧩 布局组件 (Layout Components)
+     │   • .dtb-item                  - 通用条目容器，带悬停、动画、装饰条
+     │   • .dtb-section-container     - 分区容器，分隔设置区域
+     │   • .dtb-list-container        - 通用列表容器
+     │   • .dtb-list-row              - 列表行，支持输入与布局
+     │   • .dtb-flex-container-end    - 按钮右对齐容器
+     │   • .dtb-flex-container-center - 按钮居中容器
+     │   • .dtb-flex-container-spaced - 按钮分散容器
+     │   • .dtb-flex-1                - 弹性布局工具类
+     │   • .dtb-large-button-container- 大按钮区（如添加背景、API等）
+     ├─────────────────────────────────────────────────────────────────────────
+     │ 📝 表单控件 (Form Controls)
+     │   • .dtb-input                 - 输入框，统一样式与焦点效果
+     │   • .dtb-dropdown              - 下拉选择框，带自定义箭头
+     │   • .dtb-checkbox              - 复选框容器，统一间距与布局
+     │   • .dtb-field                 - 字段包装器，含标签与描述
+     │   • .dtb-multiselect           - 多选容器，支持滚动
+     │   • .dtb-textarea              - 文本域，模态框专用
+     ├─────────────────────────────────────────────────────────────────────────
+     │ 🎨 视觉元素 (Visual Elements)
+     │   • .dtb-badge                 - 类型标签徽章，渐变背景
+     │   • .dtb-hint                  - 提示信息框，带强调条
+     │   • .dtb-bg-preview            - 背景预览缩略图，支持图片/颜色/渐变
+     │   • .dtb-bg-content            - 背景项内容容器
+     │   • .dtb-bg-name               - 背景名称
+     │   • .dtb-link              - 文档链接
+     │   • .dtb-links             - 文档链接容器
+     ├─────────────────────────────────────────────────────────────────────────
+     │ 🔘 交互与操作组件 (Interactive & Actions)
+     │   • .dtb-button-container      - 操作按钮组容器
+     │   • .dtb-button                - 操作按钮，统一悬停/点击效果
+     │   • .dtb-remove-button         - 删除按钮，圆形红色警告样式
+     │   • .dtb-suggestion            - 建议选项，自动完成支持
+     │   • .dtb-draggable             - 可拖拽元素
+     │   • .dtb-drag-handle           - 拖拽手柄
+     │   • .dtb-drag-over-top/bottom  - 拖拽放置高亮区域
+     │   • .dtb-dragging              - 拖拽状态样式
+     ├─────────────────────────────────────────────────────────────────────────
+     │ ⚡ API管理与模态框 (API & Modal)
+     │   • .dtb-api-modal-container   - API模态框主容器
+     │   • .dtb-section-header        - Section标题容器
+     │   • .dtb-loading               - 加载状态样式
+     │   • .dtb-api-status            - API状态指示器
+     │   • .dtb-api-status-dot        - API状态点（启用/禁用/错误/加载）
+     └─────────────────────────────────────────────────────────────────────────
+
+     设计原则与说明：
+     • 所有组件均支持 Obsidian 主题 CSS 变量，确保深色/浅色主题兼容
+     • 响应式设计：600px 以下自动切换为移动端布局，每部分的响应式设计放于节末尾
+     • 统一动画与过渡效果，采用 cubic-bezier 缓动
+     • 无障碍友好：焦点状态、键盘导航支持
+     • 拖拽、分阶段入场动画、悬停高亮等交互细节
+
+     注意事项：
+     ⚠️ 请勿直接修改这些通用样式，如需定制请创建特定覆盖样式
+     ⚠️ 新增组件请遵循 dtb- 前缀及现有设计模式
+ ============================================================================= */
+
+/* =============================================================================
+    🎛️ 设计变量（Tokens） & 模块入口（单文件模块化）
+============================================================================= */
+:root {
+    /* 动画节奏 */
+    --dtb-anim-quick-curve: 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+    --dtb-anim-fast-curve: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --dtb-anim-normal-curve: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* 阴影仅保留两档：基础/悬停（另保留焦点描边） */
+    --dtb-shadow-base: 0 2px 8px rgb(0 0 0 / 0.06);
+    --dtb-shadow-hover: 0 4px 12px rgb(0 0 0 / 0.15);
+    --dtb-shadow-outline: 0 0 0 2px var(--interactive-accent-hover);
+}
+
+/* =============================================================================
+    🚀 核心样式
+============================================================================= */
+
+/* 工作区背景 */
+.dtb-enabled .workspace-split,         /* 工作区分割容器 - 主要布局分割区域 */
+.dtb-enabled .workspace-leaf,          /* 工作区叶子节点 - 单个面板容器 */
+.dtb-enabled .workspace-tab-header-container,  /* 标签页头部容器 - 包含所有标签页 */
+.dtb-enabled .workspace-tab-header,    /* 单个标签页头部 - 每个标签页的头部 */
+.dtb-enabled .view-header,             /* 视图头部 - 文件/视图的顶部区域 */
+.dtb-enabled .view-content,            /* 视图内容区 - 主要内容显示区域 */
+.dtb-enabled .markdown-source-view,    /* Markdown源码视图 - 编辑模式 */
+.dtb-enabled .markdown-preview-view,   /* Markdown预览视图 - 预览模式 */
+.dtb-enabled .cm-editor /* CodeMirror编辑器 - 代码编辑器组件 */ {
+    /* 将所有背景相关的CSS变量覆盖为动态背景颜色 */
+    --background-primary: var(--dtb-bg-color) !important; /* 主要背景色 */
+    --background-primary-alt: var(--dtb-bg-color) !important; /* 主要背景色变体 */
+    --background-secondary: var(--dtb-bg-color) !important; /* 次要背景色 */
+    --background-secondary-alt: var(--dtb-bg-color) !important; /* 次要背景色变体 */
+}
+
+/* 通过主题类切换遮罩变量：将 light/dark 两套变量映射到统一 --dtb-bg-color */
+.theme-light {
+    --dtb-bg-color: var(--dtb-bg-color-light, rgb(200 200 200 / 0.38));
+}
+.theme-dark {
+    --dtb-bg-color: var(--dtb-bg-color-dark, rgb(31 30 30 / 0.38));
+}
+.dtb-enabled .workspace::before {
+    background-image: var(--dtb-bg-image);
+    background-size: var(--dtb-bg-size);
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: blur(var(--dtb-blur-depth)) brightness(var(--dtb-brightness)) saturate(var(--dtb-saturate));
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+}
+
+/* 针对工作区其他部分的修改 */
+.dtb-enabled .workspace-tab-header-container,
+.dtb-enabled .workspace-tab-header-container .workspace-tab-header.tappable.is-active,
+.dtb-enabled .workspace-tab-header.tappable.is-active,
+.dtb-enabled .workspace-split.mod-vertical.mod-root,
+.dtb-enabled .workspace-split.mod-horizontal.mod-sidedock.mod-left-split,
+.dtb-enabled .workspace-split.mod-horizontal.mod-sidedock.mod-right-split,
+.dtb-enabled .titlebar-button-container.mod-right,
+.dtb-enabled .status-bar,
+.dtb-enabled .workspace-ribbon::before,
+.dtb-enabled .workspace-ribbon {
+    background-color: var(--dtb-bg-color) !important;
+}
+
+/* =============================================================================
+   🧩 布局组件
+   ============================================================================= */
+
+/* 通用分区容器样式 - 紧凑简洁 */
+.dtb-section-container {
+    margin-bottom: 20px;
+    padding: 16px;
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 10px;
+    background-color: var(--background-secondary);
+    box-shadow: var(--dtb-shadow-base);
+    position: relative;
+    transition: box-shadow var(--dtb-anim-normal-curve);
+}
+
+/* 容器悬停效果 */
+.dtb-section-container:hover {
+    box-shadow: var(--dtb-shadow-hover);
+}
+
+/* 设置项 - 紧凑现代卡片 */
+.dtb-item,
+.dtb-section-container .setting-item {
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 10px;
+    padding: 0.75rem !important;
+    background: var(--background-primary-alt);
+    transition: all var(--dtb-anim-normal-curve);
+    position: relative;
+    overflow: hidden;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    gap: 1rem !important;
+    box-shadow: var(--dtb-shadow-base);
+}
+
+/* 左侧装饰条 */
+.dtb-item::before,
+.dtb-section-container .setting-item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background: var(--interactive-accent);
+    opacity: 0;
+    transition: all var(--dtb-anim-normal-curve);
+    border-radius: 0 2px 2px 0;
+}
+
+/* 简洁悬停效果 */
+.dtb-item:hover,
+.dtb-section-container .setting-item:hover {
+    border-color: var(--interactive-accent);
+    box-shadow:
+        0 3px 12px rgb(0 0 0 / 0.08),
+        0 1px 4px rgb(var(--interactive-accent-rgb) / 0.1);
+    transform: translateY(-1px);
+}
+
+/* 悬停时显示装饰条 */
+.dtb-item:hover::before,
+.dtb-section-container .setting-item:hover::before {
+    opacity: 1;
+}
+
+/* 活跃状态的脉冲效果 */
+.dtb-item:active,
+.dtb-section-container .setting-item:active {
+    transform: translateY(-1px) scale(0.99);
+    transition: all var(--dtb-anim-quick-curve);
+}
+
+/* 设置项信息区域 - 紧凑优化 */
+.dtb-section-container .setting-item .setting-item-info {
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    margin-right: 1rem;
+}
+
+/* 紧凑标题样式 */
+.dtb-section-container .setting-item .setting-item-name {
+    font-weight: 600;
+    color: var(--text-normal);
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+    line-height: 1.3;
+    transition: color var(--dtb-anim-normal-curve);
+}
+
+/* 标题悬停效果 */
+.dtb-item:hover .setting-item-name,
+.dtb-section-container .setting-item:hover .setting-item-name {
+    color: var(--interactive-accent);
+}
+
+/* 紧凑描述文字 */
+.dtb-section-container .setting-item .setting-item-description {
+    overflow-wrap: break-word;
+    /* word-break: break-word; deprecated; rely on overflow-wrap */
+    hyphens: auto;
+    line-height: 1.4;
+    color: var(--text-muted);
+    font-size: 0.88rem;
+    opacity: 0.85;
+    transition: opacity var(--dtb-anim-normal-curve);
+}
+
+.dtb-item:hover .setting-item-description,
+.dtb-section-container .setting-item:hover .setting-item-description {
+    opacity: 1;
+    color: var(--text-normal);
+}
+
+/* 仅亮主题下：插件设置项描述文字稍微加深，便于区分（不影响其他区域） */
+.theme-light .setting-item-description,
+.theme-light .dtb-section-container .setting-item .setting-item-description {
+    color: var(--text-normal);
+    opacity: 0.95;
+}
+
+/* 紧凑控件区域 */
+.dtb-section-container .setting-item .setting-item-control {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    margin: auto 0; /* 控件垂直居中 */
+}
+
+/* ===== 响应式优化 ===== */
+@media (max-width: 768px) {
+    .dtb-section-container {
+        padding: 12px;
+        margin-bottom: 16px;
+    }
+
+    .dtb-item,
+    .dtb-section-container .setting-item {
+        padding: 0.6rem !important;
+        gap: 0.8rem !important;
+        margin-bottom: 0.3rem;
+    }
+
+    .dtb-section-container .setting-item .setting-item-name {
+        font-size: 0.95rem;
+        margin-bottom: 0.2rem;
+    }
+
+    .dtb-section-container .setting-item .setting-item-description {
+        font-size: 0.85rem;
+    }
+}
+
+/* ===== 暗色模式优化 ===== */
+.theme-dark .dtb-section-container {
+    box-shadow: var(--dtb-shadow-base);
+}
+
+.theme-dark .dtb-section-container:hover {
+    box-shadow: var(--dtb-shadow-hover);
+}
+
+.theme-dark .dtb-item,
+.theme-dark .dtb-section-container .setting-item {
+    box-shadow: var(--dtb-shadow-base);
+}
+
+.theme-dark .dtb-item:hover,
+.theme-dark .dtb-section-container .setting-item:hover {
+    box-shadow:
+        0 3px 12px rgb(0 0 0 / 0.2),
+        0 1px 4px rgb(var(--interactive-accent-rgb) / 0.15);
+}
+
+/* 通用列表容器样式 */
+.dtb-list-container {
+    margin-bottom: 12px;
+}
+.dtb-list-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+.dtb-list-row .dtb-input {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+/* 通用按钮容器样式 */
+.dtb-flex-container-end {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 15px;
+}
+.dtb-flex-container-center {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 15px;
+}
+.dtb-flex-container-spaced {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+/* 弹性布局工具类 */
+.dtb-flex-1 {
+    flex: 1;
+}
+
+/* 响应式设计 (Responsive Design) */
+@media (max-width: 600px) {
+    .dtb-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.6rem;
+        padding: 0.8rem;
+    }
+
+    .dtb-flex-container,
+    .dtb-flex-container-center,
+    .dtb-flex-container-spaced {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
+/* =============================================================================
+   📝 表单控件
+   ============================================================================= */
+
+/* 通用输入框样式 */
+.dtb-input {
+    width: 100%;
+    padding: 8px 12px;
+    margin-bottom: 10px;
+    min-height: 32px;
+    line-height: 1.4;
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 6px;
+    background-color: var(--background-primary);
+    color: var(--text-normal);
+    font-size: var(--font-ui-medium);
+    transition: border-color var(--dtb-anim-fast-curve);
+}
+.dtb-input:focus {
+    outline: none;
+    border-color: var(--interactive-accent);
+    box-shadow: var(--dtb-shadow-outline);
+}
+
+/* 通用下拉选择框样式 */
+.dtb-dropdown {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 10px;
+    height: auto;
+    min-height: 36px;
+    line-height: normal;
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 6px;
+    background-color: var(--background-primary);
+    color: var(--text-normal);
+    font-size: var(--font-ui-medium);
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: border-color var(--dtb-anim-fast-curve);
+    appearance: none;
+    /* 使用更好的下拉箭头图标 */
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23888888' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+    padding-right: 40px;
+}
+.dtb-dropdown:focus {
+    outline: none;
+    border-color: var(--interactive-accent);
+    box-shadow: var(--dtb-shadow-outline);
+}
+.dtb-dropdown option {
+    background-color: var(--background-primary);
+    color: var(--text-normal);
+    padding: 4px 8px;
+}
+
+/* 通用字段容器样式 */
+.dtb-field {
+    margin-bottom: 16px;
+}
+.dtb-field label {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: 500;
+    color: var(--text-normal);
+}
+.dtb-field-description {
+    font-style: italic;
+    color: var(--text-muted);
+}
+
+/* 通用多选容器样式 */
+.dtb-multiselect {
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 4px;
+    padding: 8px;
+    background-color: var(--background-primary);
+}
+
+/* 通用复选框容器样式 */
+.dtb-checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+}
+.dtb-checkbox:last-child {
+    margin-bottom: 0;
+}
+.dtb-checkbox label {
+    margin: 0 0 0 8px;
+}
+
+/* 模态框文本域样式 */
+.dtb-textarea {
+    width: 100%;
+    min-height: 120px;
+    padding: 12px;
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 6px;
+    background-color: var(--background-primary);
+    color: var(--text-normal);
+    font-family: var(--font-monospace);
+    font-size: var(--font-ui-small);
+    resize: vertical;
+    transition: border-color var(--dtb-anim-fast-curve);
+}
+.dtb-textarea:focus {
+    outline: none;
+    border-color: var(--interactive-accent);
+    box-shadow: var(--dtb-shadow-outline);
+}
+
+/* 响应式设计 (Responsive Design) */
+
+/* =============================================================================
+   🎨 视觉元素
+   ============================================================================= */
+
+/* 通用类型标签徽章 */
+.dtb-badge {
+    background: linear-gradient(135deg, var(--interactive-accent), var(--interactive-accent-hover));
+    color: var(--text-on-accent);
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: var(--dtb-shadow-base);
+    display: inline-block;
+    user-select: none;
+}
+
+/* 提示信息 */
+.dtb-hint {
+    font-size: 0.9em;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+    padding: 12px 16px;
+    background: linear-gradient(135deg, var(--background-secondary), var(--background-primary-alt));
+    border-radius: 8px;
+    border-left: 4px solid var(--interactive-accent);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all var(--dtb-anim-fast-curve);
+    box-shadow: var(--dtb-shadow-base);
+}
+.theme-light .dtb-hint {
+    color: var(--text-normal);
+    opacity: 0.95;
+}
+/* 拖拽提示悬停效果 */
+.dtb-hint:hover {
+    transform: translateX(4px);
+    box-shadow: var(--dtb-shadow-hover);
+}
+
+/* 链接容器样式 */
+.dtb-links {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+/* 链接样式 */
+.dtb-link {
+    font-size: 0.85em;
+    color: var(--text-accent);
+    text-decoration: none;
+    padding: 4px 8px;
+    border-radius: 6px;
+    border: 1px solid var(--background-modifier-border);
+    background: var(--background-secondary);
+    transition: all var(--dtb-anim-fast-curve);
+    white-space: nowrap;
+}
+.dtb-link:hover {
+    background: var(--background-modifier-hover);
+    border-color: var(--text-accent);
+    transform: translateY(-1px);
+    box-shadow: var(--dtb-shadow-hover);
+}
+.dtb-link:active {
+    transform: translateY(0);
+}
+
+/* 响应式设计 (Responsive Design) */
+@media (max-width: 600px) {
+    .dtb-hint {
+        font-size: 0.85em;
+        padding: 10px 12px;
+    }
+
+    .dtb-bg-preview {
+        align-self: center;
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* =============================================================================
+   🔘 交互组件
+   ============================================================================= */
+
+/* 通用操作按钮容器，用于创建一组按钮 */
+.dtb-button-container {
+    display: flex;
+    gap: 0.6rem;
+}
+/* 通用操作按钮 */
+.dtb-button,
+.dtb-button-container button {
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--background-modifier-border);
+    background: var(--background-primary);
+    color: var(--text-normal);
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: all var(--dtb-anim-fast-curve);
+    position: relative;
+    overflow: hidden;
+}
+/* 按钮 */
+.dtb-button::before,
+.dtb-button-container button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgb(255 255 255 / 0.1), transparent);
+    transition: left 0.5s ease;
+}
+/* 按钮悬停效果 */
+.dtb-button:hover,
+.dtb-button-container button:hover {
+    background: var(--interactive-hover) !important;
+    border-color: var(--interactive-accent) !important;
+    transform: translateY(-2px);
+    box-shadow: var(--dtb-shadow-hover);
+}
+.dtb-button:hover::before,
+.dtb-button-container button:hover::before {
+    left: 100%;
+}
+/* 按钮点击效果 */
+.dtb-button:active,
+.dtb-button-container button:active {
+    transform: translateY(0);
+    box-shadow: var(--dtb-shadow-base);
+}
+
+/* 大按钮容器样式， 用于放置添加背景、API等的按钮 */
+.dtb-large-button-container .setting-item-control {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.dtb-large-button,
+.dtb-large-button-container button {
+    border-radius: 10px;
+    padding: 0.8rem 1.5rem;
+    font-weight: 600;
+    transition: all var(--dtb-anim-fast-curve);
+    border: 2px solid transparent;
+    background: linear-gradient(135deg, var(--interactive-accent), var(--interactive-accent-hover));
+    color: var(--text-on-accent);
+    box-shadow: var(--dtb-shadow-base);
+}
+.dtb-large-button:hover,
+.dtb-large-button-container button:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--dtb-shadow-hover);
+    border-color: var(--background-modifier-border);
+}
+
+/* 删除按钮，圆形红色警告样式 */
+.dtb-remove-button {
+    background-color: var(--background-modifier-error);
+    color: var(--text-on-accent);
+    /* 使用默认 border 值 */
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color var(--dtb-anim-fast-curve);
+}
+.dtb-remove-button:hover {
+    background-color: var(--background-modifier-error-hover);
+}
+
+/* 建议项样式 */
+.dtb-suggestion {
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color var(--dtb-anim-fast-curve);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.dtb-suggestion:hover {
+    background: var(--background-modifier-hover);
+}
+.dtb-suggestion.is-selected {
+    background: var(--interactive-accent);
+    color: var(--text-on-accent);
+}
+
+/* 可拖拽元素的基础样式 */
+.dtb-draggable {
+    cursor: grab;
+    transition: all var(--dtb-anim-fast-curve);
+}
+.dtb-draggable:hover {
+    transform: translateY(-1px);
+}
+/* 拖拽状态样式（通用） */
+.dtb-dragging {
+    opacity: 0.5;
+    cursor: grabbing;
+    transform: rotate(2deg) scale(0.98);
+    z-index: 1000;
+}
+
+/* 拖拽手柄 */
+.dtb-drag-handle {
+    color: var(--text-muted);
+    cursor: grab;
+    padding: 4px;
+    user-select: none;
+    font-weight: bold;
+    line-height: 1;
+    transition: all var(--dtb-anim-fast-curve);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 24px;
+    height: 24px;
+    margin: auto 0;
+}
+.dtb-drag-handle:hover {
+    color: var(--text-normal);
+    background: var(--background-modifier-hover);
+    transform: scale(1.1);
+}
+
+/* 拖拽放置区域样式 - 顶部（通用） */
+.dtb-drag-over-top {
+    border-top: 3px solid var(--interactive-accent) !important;
+    border-top-left-radius: 10px !important;
+    border-top-right-radius: 10px !important;
+    margin-top: 6px;
+    position: relative;
+}
+/* 拖拽放置区域顶部指示线（通用） */
+.dtb-drag-over-top::before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--interactive-accent);
+    border-radius: 1px;
+    box-shadow: 0 0 8px var(--interactive-accent);
+    z-index: 1;
+}
+/* 拖拽放置区域样式 - 底部（通用） */
+.dtb-drag-over-bottom {
+    border-bottom: 3px solid var(--interactive-accent) !important;
+    border-bottom-left-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
+    margin-bottom: 6px;
+    position: relative;
+}
+/* 拖拽放置区域底部指示线（通用） */
+.dtb-drag-over-bottom::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--interactive-accent);
+    border-radius: 1px;
+    box-shadow: 0 0 8px var(--interactive-accent);
+    z-index: 1;
+}
+
+/* 响应式设计 (Responsive Design) */
+@media (max-width: 600px) {
+    .dtb-button-container {
+        margin-left: 0;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .dtb-button-container button {
+        flex: 1;
+        min-width: 0;
+    }
+
+    /* 拖拽响应式样式 */
+    .dtb-drag-handle {
+        min-width: 32px;
+        height: 32px;
+        font-size: 1.2em;
+    }
+
+    /* 添加背景容器响应式 */
+    .dtb-large-button-container .setting-item-control {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .dtb-large-button-container button {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* =============================================================================
+   背景项元素样式 (Background Item Elements)
+   ============================================================================= */
+
+/* 背景项内容容器 */
+.dtb-bg-content {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    flex: 1;
+}
+/* 背景名称 */
+.dtb-bg-name {
+    font-weight: 600;
+    flex: 1;
+    font-size: 0.95rem;
+    letter-spacing: -0.01em;
+    color: var(--text-normal);
+}
+/* 背景预览图 */
+.dtb-bg-preview {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    border: 2px solid var(--background-modifier-border);
+    box-shadow: var(--dtb-shadow-base);
+    transition: all var(--dtb-anim-fast-curve);
+    position: relative;
+    overflow: hidden;
+    /* 默认背景样式 */
+    background-color: var(--background-secondary);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* 图片类型预览的特殊样式 */
+.dtb-bg-preview.dtb-preview-image {
+    background-image: var(--dtb-preview-bg-image, none);
+}
+/* 颜色和渐变类型预览的特殊样式 */
+.dtb-bg-preview.dtb-preview-color,
+.dtb-bg-preview.dtb-preview-gradient {
+    background: var(--dtb-preview-bg, var(--background-secondary));
+}
+/* 预览图加载失败时的占位样式 */
+.dtb-bg-preview::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--background-secondary);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    z-index: -1;
+}
+/* 当背景图片加载失败时显示占位符 */
+.dtb-bg-preview.dtb-preview-image:not([style*="--dtb-preview-bg-image"])::before {
+    opacity: 1;
+}
+/* 预览图内侧光晕效果 */
+.dtb-bg-preview::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 6px;
+    box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.1);
+}
+/* 预览图悬停效果 */
+.dtb-bg-preview:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 16px rgb(0 0 0 / 0.15);
+}
+
+/* =============================================================================
+   API管理样式 (API Management Styles)
+   ============================================================================= */
+
+/* API loading状态样式 */
+.dtb-loading {
+    position: relative;
+    opacity: 0.6;
+    pointer-events: none;
+}
+.dtb-loading::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    margin: -6px 0 0 -6px;
+    border: 2px solid transparent;
+    border-top: 2px solid var(--interactive-accent);
+    border-radius: 50%;
+    animation: dtb-spin 1s linear infinite;
+}
+@keyframes dtb-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* API状态指示器 */
+.dtb-api-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.8em;
+    margin-left: 8px;
+}
+.dtb-api-status-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--text-muted);
+}
+.dtb-api-status-dot.enabled {
+    background: var(--color-green);
+}
+.dtb-api-status-dot.disabled {
+    background: var(--text-muted);
+}
+.dtb-api-status-dot.error {
+    background: var(--color-red);
+}
+.dtb-api-status-dot.loading {
+    background: var(--interactive-accent);
+    animation: dtb-pulse 1.5s ease-in-out infinite;
+}
+@keyframes dtb-pulse {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+    }
+}
+
+/* =============================================================================
+   模态框样式 (Modal Styles)
+   ============================================================================= */
+
+/* api 模态框容器样式 - 限制宽度并居中 */
+.dtb-api-modal-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+/* 模态框在较小屏幕上的响应式适配 */
+@media (max-width: 900px) {
+    .dtb-api-modal-container {
+        max-width: 95vw;
+        padding: 16px;
+    }
+}
+@media (max-width: 600px) {
+    .dtb-api-modal-container {
+        max-width: 100vw;
+        padding: 12px;
+    }
+
+    .dtb-flex-container-end {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+/* API模态框特定样式优化 */
+.dtb-api-modal-container .dtb-section-container {
+    margin-bottom: 20px;
+    padding: 16px;
+}
+.dtb-api-modal-container .dtb-field {
+    margin-bottom: 16px;
+}
+.dtb-api-modal-container .dtb-field label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: var(--text-normal);
+}
+.dtb-api-modal-container .dtb-input,
+.dtb-api-modal-container .dtb-dropdown {
+    margin-bottom: 8px;
+}
+/* 多选容器优化 */
+.dtb-api-modal-container .dtb-multiselect {
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 6px;
+    padding: 8px;
+    background-color: var(--background-primary);
+}
+.dtb-api-modal-container .dtb-checkbox {
+    margin-bottom: 6px;
+    padding: 4px;
+    border-radius: 4px;
+    transition: background-color var(--dtb-anim-fast-curve);
+}
+.dtb-api-modal-container .dtb-checkbox:hover {
+    background-color: var(--background-modifier-hover);
+}
+/* 列表行样式优化 */
+.dtb-api-modal-container .dtb-list-row {
+    margin-bottom: 8px;
+    align-items: center;
+}
+.dtb-api-modal-container .dtb-list-row .dtb-input {
+    margin-bottom: 0;
+}
+/* 按钮容器优化 */
+.dtb-api-modal-container .dtb-flex-container-end {
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 1px solid var(--background-modifier-border);
+}
+
+/* Section Header 样式 */
+.dtb-section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+/* ===== 炫酷状态栏图标样式 ===== */
+.dtb-status-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    padding: 0.2em 1em 0.2em 0.8em;
+    border-radius: 1.2em;
+    font-weight: bold;
+    font-size: 1em;
+    color: var(--status-bar-text-color, var(--text-normal));
+    box-shadow: 0 1px 6px 0 rgb(80 180 255 / 0.1);
+    border: 1px solid var(--background-modifier-border);
+    position: relative;
+    overflow: hidden;
+    transition:
+        box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+        background 0.3s;
+}
+.dtb-status-bar:hover {
+    box-shadow:
+        0 2px 12px 0 rgb(80 180 255 / 0.18),
+        0 0 8px 2px #91eac9;
+    background: linear-gradient(90deg, var(--status-bar-background, rgb(40 44 52 / 0.92)) 60%, #91eac9 100%);
+}
+.dtb-status-bar .dtb-status-icon {
+    width: 1.4em;
+    height: 1.4em;
+    margin-right: 0.3em;
+    filter: drop-shadow(0 0 2px #91eac9);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.dtb-status-bar:hover .dtb-status-icon {
+    transform: rotate(-12deg) scale(1.18);
+}
+.dtb-status-bar .dtb-status-text {
+    letter-spacing: 0.04em;
+    text-shadow: 0 1px 2px #0002;
+    font-size: 1em;
+}
+.dtb-status-bar .dtb-status-dot {
+    width: 0.7em;
+    height: 0.7em;
+    border-radius: 50%;
+    margin-left: 0.5em;
+    background: radial-gradient(circle, #91eac9 60%, var(--status-bar-background, #7f7fd5) 100%);
+    box-shadow: 0 0 4px 1px #91eac9;
+    animation: dtb-dot-pulse 1.2s infinite alternate;
+}
+@keyframes dtb-dot-pulse {
+    0% {
+        box-shadow:
+            0 0 8px 2px #91eac9,
+            0 0 2px 1px #fff8;
+    }
+    100% {
+        box-shadow:
+            0 0 16px 4px #91eac9,
+            0 0 4px 2px #fff8;
+    }
+}
+
+/* =============================================================================
+   亮主题图标可见性优化（仅在插件启用时生效）
+   ============================================================================= */
+/* 统一图标颜色变量，便于主题/悬停态一致性处理 */
+.theme-light.dtb-enabled {
+    --icon-color: var(--text-normal);
+    --icon-color-hover: var(--text-accent);
+    --icon-color-active: var(--interactive-accent);
+}
+
+/* 常见可点击图标采用变量色，保证 currentColor 生效 */
+.theme-light.dtb-enabled .clickable-icon,
+.theme-light.dtb-enabled .workspace-tab-header .clickable-icon,
+.theme-light.dtb-enabled .view-header-icon,
+.theme-light.dtb-enabled .side-dock-ribbon .clickable-icon,
+.theme-light.dtb-enabled .status-bar .clickable-icon {
+    color: var(--icon-color);
+}
+
+.theme-light.dtb-enabled .clickable-icon:hover,
+.theme-light.dtb-enabled .workspace-tab-header .clickable-icon:hover,
+.theme-light.dtb-enabled .view-header-icon:hover,
+.theme-light.dtb-enabled .side-dock-ribbon .clickable-icon:hover,
+.theme-light.dtb-enabled .status-bar .clickable-icon:hover {
+    color: var(--icon-color-hover);
+}
+
+.theme-light.dtb-enabled .clickable-icon.is-active,
+.theme-light.dtb-enabled .clickable-icon:active {
+    color: var(--icon-color-active);
+}
+
+/* 确保 SVG 图标继承字体色生效 */
+.theme-light.dtb-enabled .clickable-icon svg,
+.theme-light.dtb-enabled .view-header-icon svg {
+    fill: none; /* 保持线框图标不被实心填充覆盖细节 */
+    stroke: currentColor;
+}

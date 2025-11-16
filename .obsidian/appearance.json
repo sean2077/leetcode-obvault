@@ -3,5 +3,7 @@
   "enabledCssSnippets": [
     "custom-dataview-table",
     "h1居中"
-  ]
+  ],
+  "theme": "obsidian",
+  "accentColor": ""
 }
