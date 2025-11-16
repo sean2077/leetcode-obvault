@@ -433,7 +433,7 @@ properties:
     displayName: Difficulty
 views:
   - type: table
-    name: Table
+    name: Similar Problems
     filters:
       and:
         - file.hasLink(this.file)

@@ -20,8 +20,8 @@ grade: ⭐⭐⭐⭐⭐
 likes: 242
 dislikes: 0
 favorites: []
-created: 2025-11-16 11:17
-updated: 2025-11-16 11:17
+created: 2025-11-16 12:09
+updated: 2025-11-16 12:09
 ---
 
 **Nav:** << previous: [[LCP 18.2vYnGI|LCP 18.早餐组合]] | next: [[LCP 20.meChtZ|LCP 20.快速公交]] >>
@@ -123,7 +123,7 @@ properties:
     displayName: Difficulty
 views:
   - type: table
-    name: Table
+    name: Similar Problems
     filters:
       and:
         - file.hasLink(this.file)

@@ -20,8 +20,8 @@ grade: ⭐⭐⭐⭐⭐
 likes: 171
 dislikes: 0
 favorites: []
-created: 2025-11-16 11:17
-updated: 2025-11-16 11:17
+created: 2025-11-16 12:09
+updated: 2025-11-16 12:09
 ---
 
 **Nav:** << previous: [[3744.find-kth-character-in-expanded-string|3744.在展开字符串中查找第 K 个字符]] | next: [[LCP 02.deep-dark-fraction|LCP 02.分式化简]] >>
@@ -136,7 +136,7 @@ properties:
     displayName: Difficulty
 views:
   - type: table
-    name: Table
+    name: Similar Problems
     filters:
       and:
         - file.hasLink(this.file)

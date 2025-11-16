@@ -20,8 +20,8 @@ grade: ⭐⭐⭐⭐⭐
 likes: 15
 dislikes: 0
 favorites: []
-created: 2025-11-16 11:17
-updated: 2025-11-16 11:17
+created: 2025-11-16 12:09
+updated: 2025-11-16 12:09
 ---
 
 **Nav:** << previous: [[LCP 64.U7WvvU|LCP 64.二叉树灯饰]] | next: [[LCP 66.600YaG|LCP 66.最小展台数量]] >>
@@ -131,7 +131,7 @@ properties:
     displayName: Difficulty
 views:
   - type: table
-    name: Table
+    name: Similar Problems
     filters:
       and:
         - file.hasLink(this.file)

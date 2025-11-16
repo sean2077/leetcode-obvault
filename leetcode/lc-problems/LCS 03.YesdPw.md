@@ -20,8 +20,8 @@ grade: ⭐⭐⭐⭐⭐
 likes: 30
 dislikes: 0
 favorites: []
-created: 2025-11-16 11:18
-updated: 2025-11-16 11:18
+created: 2025-11-16 12:09
+updated: 2025-11-16 12:09
 ---
 
 **Nav:** << previous: [[LCS 02.WqXACV|LCS 02.完成一半题目]] | next: [[面试题 01.01.is-unique-lcci|面试题 01.01.判定字符是否唯一]] >>
@@ -131,7 +131,7 @@ properties:
     displayName: Difficulty
 views:
   - type: table
-    name: Table
+    name: Similar Problems
     filters:
       and:
         - file.hasLink(this.file)

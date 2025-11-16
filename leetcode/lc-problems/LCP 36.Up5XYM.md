@@ -20,8 +20,8 @@ grade: ⭐⭐⭐⭐⭐
 likes: 34
 dislikes: 0
 favorites: []
-created: 2025-11-16 11:17
-updated: 2025-11-16 11:17
+created: 2025-11-16 12:09
+updated: 2025-11-16 12:09
 ---
 
 **Nav:** << previous: [[LCP 35.DFPeFJ|LCP 35.电动车游城市]] | next: [[LCP 37.zui-xiao-ju-xing-mian-ji|LCP 37.最小矩形面积]] >>
@@ -128,7 +128,7 @@ properties:
     displayName: Difficulty
 views:
   - type: table
-    name: Table
+    name: Similar Problems
     filters:
       and:
         - file.hasLink(this.file)

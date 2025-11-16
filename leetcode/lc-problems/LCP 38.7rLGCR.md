@@ -20,8 +20,8 @@ grade: ⭐⭐⭐⭐⭐
 likes: 14
 dislikes: 0
 favorites: []
-created: 2025-11-16 11:17
-updated: 2025-11-16 11:17
+created: 2025-11-16 12:09
+updated: 2025-11-16 12:09
 ---
 
 **Nav:** << previous: [[LCP 37.zui-xiao-ju-xing-mian-ji|LCP 37.最小矩形面积]] | next: [[LCP 39.0jQkd0|LCP 39.无人机方阵]] >>
@@ -155,7 +155,7 @@ properties:
     displayName: Difficulty
 views:
   - type: table
-    name: Table
+    name: Similar Problems
     filters:
       and:
         - file.hasLink(this.file)

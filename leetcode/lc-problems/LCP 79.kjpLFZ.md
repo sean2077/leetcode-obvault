@@ -20,8 +20,8 @@ grade: ⭐⭐⭐⭐⭐
 likes: 8
 dislikes: 0
 favorites: []
-created: 2025-11-16 11:17
-updated: 2025-11-16 11:17
+created: 2025-11-16 12:09
+updated: 2025-11-16 12:09
 ---
 
 **Nav:** << previous: [[LCP 78.Nsibyl|LCP 78.城墙防线]] | next: [[LCP 80.qoQAMX|LCP 80.生物进化录]] >>
@@ -132,7 +132,7 @@ properties:
     displayName: Difficulty
 views:
   - type: table
-    name: Table
+    name: Similar Problems
     filters:
       and:
         - file.hasLink(this.file)

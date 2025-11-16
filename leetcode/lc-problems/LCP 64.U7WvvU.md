@@ -20,8 +20,8 @@ grade: ⭐⭐⭐⭐⭐
 likes: 27
 dislikes: 0
 favorites: []
-created: 2025-11-16 11:17
-updated: 2025-11-16 11:17
+created: 2025-11-16 12:09
+updated: 2025-11-16 12:09
 ---
 
 **Nav:** << previous: [[LCP 63.EXvqDp|LCP 63.弹珠游戏]] | next: [[LCP 65.3aqs1c|LCP 65.舒适的湿度]] >>
@@ -136,7 +136,7 @@ properties:
     displayName: Difficulty
 views:
   - type: table
-    name: Table
+    name: Similar Problems
     filters:
       and:
         - file.hasLink(this.file)

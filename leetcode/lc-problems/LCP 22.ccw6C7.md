@@ -20,8 +20,8 @@ grade: ⭐⭐⭐⭐⭐
 likes: 75
 dislikes: 0
 favorites: []
-created: 2025-11-16 11:17
-updated: 2025-11-16 11:17
+created: 2025-11-16 12:09
+updated: 2025-11-16 12:09
 ---
 
 **Nav:** << previous: [[LCP 21.Za25hA|LCP 21.追逐游戏]] | next: [[LCP 23.er94lq|LCP 23.魔术排列]] >>
@@ -140,7 +140,7 @@ properties:
     displayName: Difficulty
 views:
   - type: table
-    name: Table
+    name: Similar Problems
     filters:
       and:
         - file.hasLink(this.file)

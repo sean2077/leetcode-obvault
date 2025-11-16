@@ -20,8 +20,8 @@ grade: ⭐⭐⭐⭐⭐
 likes: 32
 dislikes: 0
 favorites: []
-created: 2025-11-16 11:17
-updated: 2025-11-16 11:17
+created: 2025-11-16 12:09
+updated: 2025-11-16 12:09
 ---
 
 **Nav:** << previous: [[LCP 15.you-le-yuan-de-mi-gong|LCP 15.游乐园的迷宫]] | next: [[LCP 17.nGK0Fy|LCP 17.速算机器人]] >>
@@ -146,7 +146,7 @@ properties:
     displayName: Difficulty
 views:
   - type: table
-    name: Table
+    name: Similar Problems
     filters:
       and:
         - file.hasLink(this.file)

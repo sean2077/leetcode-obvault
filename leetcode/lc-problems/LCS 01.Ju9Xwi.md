@@ -20,8 +20,8 @@ grade: ⭐⭐⭐⭐⭐
 likes: 53
 dislikes: 0
 favorites: []
-created: 2025-11-16 11:18
-updated: 2025-11-16 11:18
+created: 2025-11-16 12:09
+updated: 2025-11-16 12:09
 ---
 
 **Nav:** << previous: [[LCR 194.er-cha-shu-de-zui-jin-gong-gong-zu-xian-lcof|LCR 194.二叉树的最近公共祖先]] | next: [[LCS 02.WqXACV|LCS 02.完成一半题目]] >>
@@ -138,7 +138,7 @@ properties:
     displayName: Difficulty
 views:
   - type: table
-    name: Table
+    name: Similar Problems
     filters:
       and:
         - file.hasLink(this.file)

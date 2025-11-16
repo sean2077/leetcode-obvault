@@ -20,8 +20,8 @@ grade: ⭐⭐⭐⭐⭐
 likes: 128
 dislikes: 0
 favorites: []
-created: 2025-11-16 11:17
-updated: 2025-11-16 11:17
+created: 2025-11-16 12:09
+updated: 2025-11-16 12:09
 ---
 
 **Nav:** << previous: [[LCP 29.SNJvJP|LCP 29.乐团站位]] | next: [[LCP 31.Db3wC1|LCP 31.变换的迷宫]] >>
@@ -125,7 +125,7 @@ properties:
     displayName: Difficulty
 views:
   - type: table
-    name: Table
+    name: Similar Problems
     filters:
       and:
         - file.hasLink(this.file)

@@ -20,8 +20,8 @@ grade: ⭐⭐⭐⭐⭐
 likes: 12
 dislikes: 0
 favorites: []
-created: 2025-11-16 11:17
-updated: 2025-11-16 11:17
+created: 2025-11-16 12:09
+updated: 2025-11-16 12:09
 ---
 
 **Nav:** << previous: [[LCP 71.kskhHQ|LCP 71.集水器]] | next: [[LCP 73.0Zeoeg|LCP 73.探险营地]] >>
@@ -129,7 +129,7 @@ properties:
     displayName: Difficulty
 views:
   - type: table
-    name: Table
+    name: Similar Problems
     filters:
       and:
         - file.hasLink(this.file)

@@ -20,8 +20,8 @@ grade: ⭐⭐⭐⭐⭐
 likes: 10
 dislikes: 0
 favorites: []
-created: 2025-11-16 11:17
-updated: 2025-11-16 11:17
+created: 2025-11-16 12:09
+updated: 2025-11-16 12:09
 ---
 
 **Nav:** << previous: [[LCP 74.xepqZ5|LCP 74.最强祝福力场]] | next: [[LCP 76.1ybDKD|LCP 76.魔法棋盘]] >>
@@ -163,7 +163,7 @@ properties:
     displayName: Difficulty
 views:
   - type: table
-    name: Table
+    name: Similar Problems
     filters:
       and:
         - file.hasLink(this.file)

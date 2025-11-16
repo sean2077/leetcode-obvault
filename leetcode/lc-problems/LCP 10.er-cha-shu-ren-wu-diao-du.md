@@ -20,8 +20,8 @@ grade: ⭐⭐⭐⭐⭐
 likes: 83
 dislikes: 0
 favorites: []
-created: 2025-11-16 11:17
-updated: 2025-11-16 11:17
+created: 2025-11-16 12:09
+updated: 2025-11-16 12:09
 ---
 
 **Nav:** << previous: [[LCP 09.zui-xiao-tiao-yue-ci-shu|LCP 09.最小跳跃次数]] | next: [[LCP 11.qi-wang-ge-shu-tong-ji|LCP 11.期望个数统计]] >>
@@ -150,7 +150,7 @@ properties:
     displayName: Difficulty
 views:
   - type: table
-    name: Table
+    name: Similar Problems
     filters:
       and:
         - file.hasLink(this.file)

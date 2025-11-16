@@ -20,8 +20,8 @@ grade: ⭐⭐⭐⭐⭐
 likes: 101
 dislikes: 0
 favorites: []
-created: 2025-11-16 11:17
-updated: 2025-11-16 11:17
+created: 2025-11-16 12:09
+updated: 2025-11-16 12:09
 ---
 
 **Nav:** << previous: [[LCP 08.ju-qing-hong-fa-shi-jian|LCP 08.剧情触发时间]] | next: [[LCP 10.er-cha-shu-ren-wu-diao-du|LCP 10.二叉树任务调度]] >>
@@ -124,7 +124,7 @@ properties:
     displayName: Difficulty
 views:
   - type: table
-    name: Table
+    name: Similar Problems
     filters:
       and:
         - file.hasLink(this.file)

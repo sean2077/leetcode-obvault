@@ -20,8 +20,8 @@ grade: ⭐⭐⭐⭐⭐
 likes: 24
 dislikes: 0
 favorites: []
-created: 2025-11-16 11:17
-updated: 2025-11-16 11:17
+created: 2025-11-16 12:09
+updated: 2025-11-16 12:09
 ---
 
 **Nav:** << previous: [[LCP 14.qie-fen-shu-zu|LCP 14.切分数组]] | next: [[LCP 16.you-le-yuan-de-you-lan-ji-hua|LCP 16.游乐园的游览计划]] >>
@@ -138,7 +138,7 @@ properties:
     displayName: Difficulty
 views:
   - type: table
-    name: Table
+    name: Similar Problems
     filters:
       and:
         - file.hasLink(this.file)

@@ -20,8 +20,8 @@ grade: ⭐⭐⭐⭐⭐
 likes: 14
 dislikes: 0
 favorites: []
-created: 2025-11-16 11:17
-updated: 2025-11-16 11:17
+created: 2025-11-16 12:09
+updated: 2025-11-16 12:09
 ---
 
 **Nav:** << previous: [[LCP 53.EJvmW4|LCP 53.守护太空城]] | next: [[LCP 55.PTXy4P|LCP 55.采集果实]] >>
@@ -158,7 +158,7 @@ properties:
     displayName: Difficulty
 views:
   - type: table
-    name: Table
+    name: Similar Problems
     filters:
       and:
         - file.hasLink(this.file)

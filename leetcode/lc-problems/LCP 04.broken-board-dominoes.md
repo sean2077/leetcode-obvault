@@ -20,8 +20,8 @@ grade: ⭐⭐⭐⭐⭐
 likes: 84
 dislikes: 0
 favorites: []
-created: 2025-11-16 11:17
-updated: 2025-11-16 11:17
+created: 2025-11-16 12:09
+updated: 2025-11-16 12:09
 ---
 
 **Nav:** << previous: [[LCP 03.programmable-robot|LCP 03.机器人大冒险]] | next: [[LCP 05.coin-bonus|LCP 05.发 LeetCoin]] >>
@@ -142,7 +142,7 @@ properties:
     displayName: Difficulty
 views:
   - type: table
-    name: Table
+    name: Similar Problems
     filters:
       and:
         - file.hasLink(this.file)

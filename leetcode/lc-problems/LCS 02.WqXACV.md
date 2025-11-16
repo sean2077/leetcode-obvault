@@ -20,8 +20,8 @@ grade: ⭐⭐⭐⭐⭐
 likes: 24
 dislikes: 0
 favorites: []
-created: 2025-11-16 11:18
-updated: 2025-11-16 11:18
+created: 2025-11-16 12:09
+updated: 2025-11-16 12:09
 ---
 
 **Nav:** << previous: [[LCS 01.Ju9Xwi|LCS 01.下载插件]] | next: [[LCS 03.YesdPw|LCS 03.主题空间]] >>
@@ -130,7 +130,7 @@ properties:
     displayName: Difficulty
 views:
   - type: table
-    name: Table
+    name: Similar Problems
     filters:
       and:
         - file.hasLink(this.file)

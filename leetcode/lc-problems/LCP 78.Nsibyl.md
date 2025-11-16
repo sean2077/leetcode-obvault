@@ -20,8 +20,8 @@ grade: ⭐⭐⭐⭐⭐
 likes: 10
 dislikes: 0
 favorites: []
-created: 2025-11-16 11:17
-updated: 2025-11-16 11:17
+created: 2025-11-16 12:09
+updated: 2025-11-16 12:09
 ---
 
 **Nav:** << previous: [[LCP 77.W2ZX4X|LCP 77.符文储备]] | next: [[LCP 79.kjpLFZ|LCP 79.提取咒文]] >>
@@ -135,7 +135,7 @@ properties:
     displayName: Difficulty
 views:
   - type: table
-    name: Table
+    name: Similar Problems
     filters:
       and:
         - file.hasLink(this.file)

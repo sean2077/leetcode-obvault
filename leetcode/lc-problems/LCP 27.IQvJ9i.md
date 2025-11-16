@@ -20,8 +20,8 @@ grade: ⭐⭐⭐⭐⭐
 likes: 22
 dislikes: 0
 favorites: []
-created: 2025-11-16 11:17
-updated: 2025-11-16 11:17
+created: 2025-11-16 12:09
+updated: 2025-11-16 12:09
 ---
 
 **Nav:** << previous: [[LCP 26.hSRGyL|LCP 26.导航装置]] | next: [[LCP 28.4xy4Wx|LCP 28.采购方案]] >>
@@ -172,7 +172,7 @@ properties:
     displayName: Difficulty
 views:
   - type: table
-    name: Table
+    name: Similar Problems
     filters:
       and:
         - file.hasLink(this.file)

@@ -20,8 +20,8 @@ grade: ⭐⭐⭐⭐⭐
 likes: 18
 dislikes: 0
 favorites: []
-created: 2025-11-16 11:17
-updated: 2025-11-16 11:17
+created: 2025-11-16 12:09
+updated: 2025-11-16 12:09
 ---
 
 **Nav:** << previous: [[LCP 42.vFjcfV|LCP 42.玩具套圈]] | next: [[LCP 44.sZ59z6|LCP 44.开幕式焰火]] >>
@@ -150,7 +150,7 @@ properties:
     displayName: Difficulty
 views:
   - type: table
-    name: Table
+    name: Similar Problems
     filters:
       and:
         - file.hasLink(this.file)

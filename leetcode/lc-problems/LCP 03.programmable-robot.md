@@ -20,8 +20,8 @@ grade: ⭐⭐⭐⭐⭐
 likes: 145
 dislikes: 0
 favorites: []
-created: 2025-11-16 11:17
-updated: 2025-11-16 11:17
+created: 2025-11-16 12:09
+updated: 2025-11-16 12:09
 ---
 
 **Nav:** << previous: [[LCP 02.deep-dark-fraction|LCP 02.分式化简]] | next: [[LCP 04.broken-board-dominoes|LCP 04.覆盖]] >>
@@ -146,7 +146,7 @@ properties:
     displayName: Difficulty
 views:
   - type: table
-    name: Table
+    name: Similar Problems
     filters:
       and:
         - file.hasLink(this.file)

@@ -20,8 +20,8 @@ grade: ⭐⭐⭐⭐⭐
 likes: 34
 dislikes: 0
 favorites: []
-created: 2025-11-16 11:17
-updated: 2025-11-16 11:17
+created: 2025-11-16 12:09
+updated: 2025-11-16 12:09
 ---
 
 **Nav:** << previous: [[LCP 51.UEcfPD|LCP 51.烹饪料理]] | next: [[LCP 53.EJvmW4|LCP 53.守护太空城]] >>
@@ -150,7 +150,7 @@ properties:
     displayName: Difficulty
 views:
   - type: table
-    name: Table
+    name: Similar Problems
     filters:
       and:
         - file.hasLink(this.file)

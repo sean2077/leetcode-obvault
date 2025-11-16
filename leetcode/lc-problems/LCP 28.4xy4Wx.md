@@ -20,8 +20,8 @@ grade: ⭐⭐⭐⭐⭐
 likes: 69
 dislikes: 0
 favorites: []
-created: 2025-11-16 11:17
-updated: 2025-11-16 11:17
+created: 2025-11-16 12:09
+updated: 2025-11-16 12:09
 ---
 
 **Nav:** << previous: [[LCP 27.IQvJ9i|LCP 27.黑盒光线反射]] | next: [[LCP 29.SNJvJP|LCP 29.乐团站位]] >>
@@ -130,7 +130,7 @@ properties:
     displayName: Difficulty
 views:
   - type: table
-    name: Table
+    name: Similar Problems
     filters:
       and:
         - file.hasLink(this.file)

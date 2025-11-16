@@ -20,8 +20,8 @@ grade: ⭐⭐⭐⭐⭐
 likes: 22
 dislikes: 0
 favorites: []
-created: 2025-11-16 11:17
-updated: 2025-11-16 11:17
+created: 2025-11-16 12:09
+updated: 2025-11-16 12:09
 ---
 
 **Nav:** << previous: [[LCP 25.Uh984O|LCP 25.古董键盘]] | next: [[LCP 27.IQvJ9i|LCP 27.黑盒光线反射]] >>
@@ -133,7 +133,7 @@ properties:
     displayName: Difficulty
 views:
   - type: table
-    name: Table
+    name: Similar Problems
     filters:
       and:
         - file.hasLink(this.file)

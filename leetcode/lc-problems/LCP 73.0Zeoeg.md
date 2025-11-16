@@ -20,8 +20,8 @@ grade: ⭐⭐⭐⭐⭐
 likes: 4
 dislikes: 0
 favorites: []
-created: 2025-11-16 11:17
-updated: 2025-11-16 11:17
+created: 2025-11-16 12:09
+updated: 2025-11-16 12:09
 ---
 
 **Nav:** << previous: [[LCP 72.hqCnmP|LCP 72.补给马车]] | next: [[LCP 74.xepqZ5|LCP 74.最强祝福力场]] >>
@@ -153,7 +153,7 @@ properties:
     displayName: Difficulty
 views:
   - type: table
-    name: Table
+    name: Similar Problems
     filters:
       and:
         - file.hasLink(this.file)

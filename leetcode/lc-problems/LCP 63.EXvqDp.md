@@ -20,8 +20,8 @@ grade: ⭐⭐⭐⭐⭐
 likes: 22
 dislikes: 0
 favorites: []
-created: 2025-11-16 11:17
-updated: 2025-11-16 11:17
+created: 2025-11-16 12:09
+updated: 2025-11-16 12:09
 ---
 
 **Nav:** << previous: [[LCP 62.D9PW8w|LCP 62.交通枢纽]] | next: [[LCP 64.U7WvvU|LCP 64.二叉树灯饰]] >>
@@ -157,7 +157,7 @@ properties:
     displayName: Difficulty
 views:
   - type: table
-    name: Table
+    name: Similar Problems
     filters:
       and:
         - file.hasLink(this.file)

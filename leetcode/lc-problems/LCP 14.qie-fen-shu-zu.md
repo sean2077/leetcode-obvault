@@ -20,8 +20,8 @@ grade: ⭐⭐⭐⭐⭐
 likes: 66
 dislikes: 0
 favorites: []
-created: 2025-11-16 11:17
-updated: 2025-11-16 11:17
+created: 2025-11-16 12:09
+updated: 2025-11-16 12:09
 ---
 
 **Nav:** << previous: [[LCP 13.xun-bao|LCP 13.寻宝]] | next: [[LCP 15.you-le-yuan-de-mi-gong|LCP 15.游乐园的迷宫]] >>
@@ -132,7 +132,7 @@ properties:
     displayName: Difficulty
 views:
   - type: table
-    name: Table
+    name: Similar Problems
     filters:
       and:
         - file.hasLink(this.file)

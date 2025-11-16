@@ -20,8 +20,8 @@ grade: ⭐⭐⭐⭐⭐
 likes: 224
 dislikes: 0
 favorites: []
-created: 2025-11-16 11:17
-updated: 2025-11-16 11:17
+created: 2025-11-16 12:09
+updated: 2025-11-16 12:09
 ---
 
 **Nav:** << previous: [[LCP 32.t3fKg1|LCP 32.批量处理任务]] | next: [[LCP 34.er-cha-shu-ran-se-UGC|LCP 34.二叉树染色]] >>
@@ -136,7 +136,7 @@ properties:
     displayName: Difficulty
 views:
   - type: table
-    name: Table
+    name: Similar Problems
     filters:
       and:
         - file.hasLink(this.file)

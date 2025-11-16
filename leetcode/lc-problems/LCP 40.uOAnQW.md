@@ -20,8 +20,8 @@ grade: ⭐⭐⭐⭐⭐
 likes: 136
 dislikes: 0
 favorites: []
-created: 2025-11-16 11:17
-updated: 2025-11-16 11:17
+created: 2025-11-16 12:09
+updated: 2025-11-16 12:09
 ---
 
 **Nav:** << previous: [[LCP 39.0jQkd0|LCP 39.无人机方阵]] | next: [[LCP 41.fHi6rV|LCP 41.黑白翻转棋]] >>
@@ -126,7 +126,7 @@ properties:
     displayName: Difficulty
 views:
   - type: table
-    name: Table
+    name: Similar Problems
     filters:
       and:
         - file.hasLink(this.file)

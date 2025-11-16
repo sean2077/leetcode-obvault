@@ -20,8 +20,8 @@ grade: ⭐⭐⭐⭐⭐
 likes: 19
 dislikes: 0
 favorites: []
-created: 2025-11-16 11:17
-updated: 2025-11-16 11:17
+created: 2025-11-16 12:09
+updated: 2025-11-16 12:09
 ---
 
 **Nav:** << previous: [[LCP 68.1GxJYY|LCP 68.美观的花束]] | next: [[LCP 70.XxZZjK|LCP 70.沙地治理]] >>
@@ -145,7 +145,7 @@ properties:
     displayName: Difficulty
 views:
   - type: table
-    name: Table
+    name: Similar Problems
     filters:
       and:
         - file.hasLink(this.file)

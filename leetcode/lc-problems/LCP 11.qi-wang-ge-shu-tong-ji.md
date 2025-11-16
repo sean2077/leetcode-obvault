@@ -20,8 +20,8 @@ grade: ⭐⭐⭐⭐⭐
 likes: 41
 dislikes: 0
 favorites: []
-created: 2025-11-16 11:17
-updated: 2025-11-16 11:17
+created: 2025-11-16 12:09
+updated: 2025-11-16 12:09
 ---
 
 **Nav:** << previous: [[LCP 10.er-cha-shu-ren-wu-diao-du|LCP 10.二叉树任务调度]] | next: [[LCP 12.xiao-zhang-shua-ti-ji-hua|LCP 12.小张刷题计划]] >>
@@ -144,7 +144,7 @@ properties:
     displayName: Difficulty
 views:
   - type: table
-    name: Table
+    name: Similar Problems
     filters:
       and:
         - file.hasLink(this.file)

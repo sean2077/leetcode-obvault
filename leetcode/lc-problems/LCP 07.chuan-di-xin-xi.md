@@ -20,8 +20,8 @@ grade: ⭐⭐⭐⭐⭐
 likes: 301
 dislikes: 0
 favorites: []
-created: 2025-11-16 11:17
-updated: 2025-11-16 11:17
+created: 2025-11-16 12:09
+updated: 2025-11-16 12:09
 ---
 
 **Nav:** << previous: [[LCP 06.na-ying-bi|LCP 06.拿硬币]] | next: [[LCP 08.ju-qing-hong-fa-shi-jian|LCP 08.剧情触发时间]] >>
@@ -142,7 +142,7 @@ properties:
     displayName: Difficulty
 views:
   - type: table
-    name: Table
+    name: Similar Problems
     filters:
       and:
         - file.hasLink(this.file)
