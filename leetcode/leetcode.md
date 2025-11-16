@@ -11,12 +11,12 @@ cssclasses:
 
 ```dataviewjs
 // Table header
-const header = ["ID", "Title", "Title (CN)", "Topics", "Difficulty", "AC Rate", "Rating", "Solutions", "Notes", "Favorites"];
+const header = ["ID", "Title", "Title (CN)", "Topics", "Difficulty", "AC Rate", "Rating", "Favorites"];
 
 // Get initial data
 let initialData = dv.pages("#leetcode/problem")
     .sort((p) => [parseInt(p.questionId) || 100000000, p.questionId])
-    .map((p) => [p.file.link, p.title, p.translatedTitle, p.lcTopics, p.lcDifficulty, p.lcAcRate, p.grade, p.solutions, p.notes, p.favorites])
+    .map((p) => [p.file.link, p.title, p.translatedTitle, p.lcTopics, p.lcDifficulty, p.lcAcRate, p.grade, p.favorites])
     .array();
 
 dv.paragraph("\n");
@@ -40,7 +40,7 @@ const createSelect = (label, options, container) => {
         const text = typeof opt === "string" ? opt : opt.text;
         dv.el("option", text, { 
             container: select, 
-            attr: { value: value === text ? "" : value }
+            attr: { value: value }
         });
     });
     return select;
@@ -48,7 +48,7 @@ const createSelect = (label, options, container) => {
 
 // Create filter selectors
 const allTopics = Array.from(new Set(dv.pages("#leetcode/topic").sort(p => p.title).map(p => p.file.name)));
-const topicSelect = createSelect("Topic:", ["All Topics", ...allTopics], filterContainer);
+const topicSelect = createSelect("Topic:", [{ text: "All Topics", value: "" }, ...allTopics], filterContainer);
 
 const difficultySelect = createSelect("Difficulty:", [
     { text: "All", value: "" },
@@ -66,14 +66,10 @@ const gradeSelect = createSelect("Rating:", [
     { text: "⭐", value: "⭐" }
 ], filterContainer);
 
-const hasSolutionSelect = createSelect("Solutions:", [
-    { text: "All", value: "All" },
-    { text: "Has Solutions", value: "Has Solutions" },
-    { text: "No Solutions", value: "No Solutions" }
-], filterContainer);
+
 
 const isFavoriteSelect = createSelect("Favorites:", [
-    { text: "All", value: "All" },
+    { text: "All", value: "" },
     { text: "Favorited", value: "Favorited" },
     { text: "Not Favorited", value: "Not Favorited" }
 ], filterContainer);
@@ -84,15 +80,11 @@ function filterData(data) {
         const topicMatch = !topicSelect.value || (item[3] && item[3].some(t => t.fileName() === topicSelect.value));
         const difficultyMatch = !difficultySelect.value || item[4] === difficultySelect.value;
         const gradeMatch = !gradeSelect.value || item[6] === gradeSelect.value;
-        const solutions = item[7]?.length || 0;
-        const solutionMatch = hasSolutionSelect.value === "All" ||
-            (hasSolutionSelect.value === "Has Solutions" && solutions > 0) ||
-            (hasSolutionSelect.value === "No Solutions" && solutions === 0);
-        const favorites = item[9]?.length || 0;
-        const favoriteMatch = isFavoriteSelect.value === "All" || 
+        const favorites = item[7]?.length || 0;
+        const favoriteMatch = !isFavoriteSelect.value || 
             (isFavoriteSelect.value === "Favorited" && favorites > 0) ||
             (isFavoriteSelect.value === "Not Favorited" && favorites === 0);
-        return topicMatch && difficultyMatch && gradeMatch && solutionMatch && favoriteMatch; 
+        return topicMatch && difficultyMatch && gradeMatch && favoriteMatch; 
     });
 }
 
@@ -106,7 +98,7 @@ function updateTable() {
 }
 
 // Add event listeners to selectors
-[topicSelect, difficultySelect, hasSolutionSelect, isFavoriteSelect, gradeSelect].forEach(select => {
+[topicSelect, difficultySelect, isFavoriteSelect, gradeSelect].forEach(select => {
     select.addEventListener("change", updateTable);
 });
 
@@ -115,9 +107,6 @@ if (!global.pageNum) {
     global.pageNum = 0;
 }
 let pageSize = 10;
-
-// Cache frequently used values
-let totalPages = Math.ceil(data.length / pageSize);
 
 // Create control container
 const controlContainer = dv.el("div", "", {
@@ -156,15 +145,15 @@ const pageInfo = dv.el("span", "", {
 });
 
 createButton("Next ›", () => {
-    global.pageNum = Math.min(global.pageNum + 1, totalPages - 1);
+    global.pageNum = Math.min(global.pageNum + 1, Math.ceil(data.length / pageSize) - 1);
     renderTable();
 });
 createButton("10 ››", () => {
-    global.pageNum = Math.min(global.pageNum + 10, totalPages - 1);
+    global.pageNum = Math.min(global.pageNum + 10, Math.ceil(data.length / pageSize) - 1);
     renderTable();
 });
 createButton("Last", () => {
-    global.pageNum = totalPages - 1;
+    global.pageNum = Math.ceil(data.length / pageSize) - 1;
     renderTable();
 });
 
@@ -178,7 +167,7 @@ const pageInput = dv.el("input", "", {
     attr: {
         type: "number",
         min: "1",
-        max: totalPages.toString(),
+        max: Math.ceil(data.length / pageSize).toString(),
         value: (global.pageNum + 1).toString(),
         style: "width: 50px; text-align: center; margin: 0 5px;"
     }
@@ -186,6 +175,7 @@ const pageInput = dv.el("input", "", {
 dv.el("span", "page", { container: controlContainer });
 
 pageInput.addEventListener("change", (e) => {
+    const totalPages = Math.ceil(data.length / pageSize);
     const newPage = Math.min(Math.max(1, parseInt(e.target.value) || 1), totalPages) - 1;
     global.pageNum = newPage;
     renderTable();
@@ -228,7 +218,7 @@ function renderTable(remove = true) {
     }
     
     // Recalculate total pages based on current data
-    totalPages = Math.ceil(data.length / pageSize);
+    const totalPages = Math.ceil(data.length / pageSize);
     
     // Ensure current page is valid
     if (global.pageNum >= totalPages && totalPages > 0) {

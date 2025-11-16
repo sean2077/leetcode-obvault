@@ -102,7 +102,64 @@
   ],
   "currentIndex": 4,
   "enableRandomWallpaper": true,
-  "wallpaperApis": [],
+  "wallpaperApis": [
+    {
+      "id": "api-wallhaven-default",
+      "name": "Wallhaven API (Default)",
+      "type": "Wallhaven",
+      "baseUrl": "https://wallhaven.cc/api/v1",
+      "enabled": false,
+      "params": {
+        "categories": "111",
+        "purity": "100",
+        "sorting": "random",
+        "order": "desc",
+        "topRange": "1M",
+        "page": 1
+      },
+      "endpoints": {
+        "search": "/search",
+        "detail": "/w/{id}",
+        "tag": "/search/tags"
+      }
+    },
+    {
+      "id": "api-qihoo360-default",
+      "name": "360壁纸 API (Default)",
+      "type": "Qihoo360",
+      "baseUrl": "http://wallpaper.apc.360.cn",
+      "enabled": false,
+      "params": {
+        "cid": "9",
+        "start": 0,
+        "count": 24,
+        "kw": "",
+        "from": "360chrome",
+        "order": "create_time"
+      },
+      "endpoints": {
+        "categories": "/index.php?c=WallPaperAndroid&a=getAllCategories",
+        "categoriesV2": "/index.php?c=WallPaper&a=getAllCategoriesV2&from=360chrome",
+        "search": "/index.php?c=WallPaper&a=search",
+        "category": "/index.php?c=WallPaperAndroid&a=getAppsByCategory",
+        "newest": "/index.php?c=WallPaper&a=getAppsByOrder&order=create_time&from=360chrome",
+        "hotSearch": "http://openbox.mobilem.360.cn/html/api/wallpaperhot.html"
+      }
+    },
+    {
+      "id": "api-peapix-bing-cn",
+      "type": "Custom",
+      "enabled": false,
+      "name": "Peapix API (Bing CN)",
+      "description": "For details, see https://peapix.com/api",
+      "baseUrl": "https://peapix.com/bing/feed?country=cn",
+      "params": {},
+      "customSettings": {
+        "imageUrlJsonPath": "$[*].imageUrl"
+      },
+      "endpoints": {}
+    }
+  ],
   "bgColor": "#1f1e1e",
   "bgColorOpacity": 0.32
 }

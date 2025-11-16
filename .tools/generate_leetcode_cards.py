@@ -14,7 +14,13 @@ import typer
 from natsort import natsorted
 from rich.console import Console
 from rich.panel import Panel
-from rich.progress import track
+from rich.progress import (
+    BarColumn,
+    Progress,
+    SpinnerColumn,
+    TaskProgressColumn,
+    TimeRemainingColumn,
+)
 from rich.table import Table
 
 # Create Rich Console instance
@@ -575,54 +581,62 @@ def batch_generate(problems_dir: str, problems_cn_dir: str, output_base_dir: str
     success_count = 0
     error_count = 0
 
-    for idx, question_id in track(
-        enumerate(sorted_ids),
-        total=len(sorted_ids),
-        description="[cyan]Generation Progress",
-    ):
-        try:
-            info = problem_info[question_id]
-            title_slug = info["title_slug"]
-            translated_title = info["translated_title"]
+    with Progress(
+        SpinnerColumn(),
+        BarColumn(),
+        TaskProgressColumn(),
+        TimeRemainingColumn(),
+        console=console,
+    ) as progress:
+        task = progress.add_task("[cyan]Generation Progress", total=len(sorted_ids))
 
-            # Determine previous and next problem links
-            prev_link = "-"
-            next_link = "-"
+        for idx, question_id in enumerate(sorted_ids):
+            try:
+                info = problem_info[question_id]
+                title_slug = info["title_slug"]
+                translated_title = info["translated_title"]
 
-            if idx > 0:
-                prev_id = sorted_ids[idx - 1]
-                prev_info = problem_info[prev_id]
-                prev_title = prev_info["translated_title"] or prev_info["title_slug"]
-                prev_link = (
-                    f"[[{prev_id}.{prev_info['title_slug']}|{prev_id}.{prev_title}]]"
+                # Determine previous and next problem links
+                prev_link = "-"
+                next_link = "-"
+
+                if idx > 0:
+                    prev_id = sorted_ids[idx - 1]
+                    prev_info = problem_info[prev_id]
+                    prev_title = (
+                        prev_info["translated_title"] or prev_info["title_slug"]
+                    )
+                    prev_link = f"[[{prev_id}.{prev_info['title_slug']}|{prev_id}.{prev_title}]]"
+
+                if idx < len(sorted_ids) - 1:
+                    next_id = sorted_ids[idx + 1]
+                    next_info = problem_info[next_id]
+                    next_title = (
+                        next_info["translated_title"] or next_info["title_slug"]
+                    )
+                    next_link = f"[[{next_id}.{next_info['title_slug']}|{next_id}.{next_title}]]"
+
+                # Generate output file path
+                output_file = output_base / f"{question_id}.{title_slug}.md"
+
+                generate_markdown(
+                    str(info["en_file"]) if info["en_file"] else None,
+                    str(info["cn_file"]) if info["cn_file"] else None,
+                    str(output_file),
+                    prev_link,
+                    next_link,
+                    slug_to_id,
                 )
+                success_count += 1
 
-            if idx < len(sorted_ids) - 1:
-                next_id = sorted_ids[idx + 1]
-                next_info = problem_info[next_id]
-                next_title = next_info["translated_title"] or next_info["title_slug"]
-                next_link = (
-                    f"[[{next_id}.{next_info['title_slug']}|{next_id}.{next_title}]]"
+            except Exception as e:
+                console.print(
+                    f"[red]❌ Error processing problem {question_id}:[/red] {str(e)}"
                 )
+                error_count += 1
 
-            # Generate output file path
-            output_file = output_base / f"{question_id}.{title_slug}.md"
-
-            generate_markdown(
-                str(info["en_file"]) if info["en_file"] else None,
-                str(info["cn_file"]) if info["cn_file"] else None,
-                str(output_file),
-                prev_link,
-                next_link,
-                slug_to_id,
-            )
-            success_count += 1
-
-        except Exception as e:
-            console.print(
-                f"[red]❌ Error processing problem {question_id}:[/red] {str(e)}"
-            )
-            error_count += 1
+            finally:
+                progress.update(task, advance=1)
 
     # Display statistics table
     table = Table(

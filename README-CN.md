@@ -17,15 +17,22 @@
 
 ## 📸 界面预览
 
-![](.assets/demo1.png)
+**Dashboard**
 
-![](.assets/demo2.png)
+![](./.assets/dashboard.png)
 
-![](.assets/demo3.png)
+**Problem Card**
 
-![](.assets/demo4.png)
+![](./.assets/problem_card(1).png)
 
-![](.assets/demo5.png)
+![](./.assets/problem_card(2).png)
+
+![](./.assets/problem_card(3).png)
+
+**Topic Card**
+
+![](./.assets/topic_card.png)
+
 
 ## 🚀 快速开始
 
