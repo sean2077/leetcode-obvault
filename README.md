@@ -33,6 +33,10 @@ English | [简体中文](README-CN.md)
 
 ![](./.assets/topic_card.png)
 
+**Graph View**
+
+![](./.assets/graph_view.png)
+
 ## 🚀 Quick Start
 
 ### For Regular Users

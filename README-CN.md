@@ -17,11 +17,11 @@
 
 ## 📸 界面预览
 
-**Dashboard**
+**面板**
 
 ![](./.assets/dashboard.png)
 
-**Problem Card**
+**题目卡片**
 
 ![](./.assets/problem_card(1).png)
 
@@ -29,10 +29,13 @@
 
 ![](./.assets/problem_card(3).png)
 
-**Topic Card**
+**主题卡片**
 
 ![](./.assets/topic_card.png)
 
+**关系图谱**
+
+![](./.assets/graph_view.png)
 
 ## 🚀 快速开始
 
