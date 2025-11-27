@@ -15,6 +15,16 @@ English | [简体中文](README-CN.md)
 - 🎯 **Topic Organization**: Organized by algorithm topics and patterns
 - ⭐ **Quality Ratings**: Problem ratings based on community feedback
 
+## Why I made this
+
+I wanted my LeetCode learning to live in my own note system where I can:
+- Reference problems in my study notes
+- See connections between problems and concepts
+- Track progress my way
+- Have everything in one place
+
+The vault comes with a Python script if you want to regenerate or customize the cards yourself.
+
 ## 📸 Screenshots
 
 **Dashboard**
