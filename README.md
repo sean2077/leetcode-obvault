@@ -95,7 +95,7 @@ Need to generate/update problem cards?
 
 This project uses data from [leetcode-problems](https://github.com/sean2077/leetcode-problems) and generates Obsidian notes using the [.tools/generate_leetcode_cards.py](.tools/generate_leetcode_cards.py) script.
 
-### Generate Single Problem | 生成单个题目
+### Generate Single Problem
 
 ```bash
 python .tools/generate_leetcode_cards.py single \
