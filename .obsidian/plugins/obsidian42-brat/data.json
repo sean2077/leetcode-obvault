@@ -1,0 +1,28 @@
+{
+  "pluginList": [
+    "sean2077/obsidian-dynamic-theme-background",
+    "sean2077/obsidian-bases-paginator"
+  ],
+  "pluginSubListFrozenVersion": [
+    {
+      "repo": "sean2077/obsidian-dynamic-theme-background",
+      "version": "latest"
+    },
+    {
+      "repo": "sean2077/obsidian-bases-paginator",
+      "version": "latest"
+    }
+  ],
+  "themesList": [],
+  "updateAtStartup": false,
+  "updateThemesAtStartup": false,
+  "enableAfterInstall": false,
+  "loggingEnabled": false,
+  "loggingPath": "BRAT-log",
+  "loggingVerboseEnabled": false,
+  "debuggingMode": false,
+  "notificationsEnabled": true,
+  "personalAccessToken": "",
+  "selectLatestPluginVersionByDefault": false,
+  "allowIncompatiblePlugins": false
+}

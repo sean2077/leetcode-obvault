@@ -1,0 +1,417 @@
+/* Bases Paginator Plugin Styles */
+
+/* ========== Container ========== */
+.bp-container {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	overflow: hidden;
+}
+
+/* ========== Filter Bar ========== */
+.bp-filter-bar {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	padding: 8px 12px;
+	border-bottom: 1px solid var(--background-modifier-border);
+	flex-wrap: wrap;
+	background: var(--background-primary);
+}
+
+.bp-search-section {
+	flex-shrink: 0;
+}
+
+.bp-search-input {
+	padding: 6px 12px;
+	border-radius: 4px;
+	border: 1px solid var(--background-modifier-border);
+	background: var(--background-primary);
+	color: var(--text-normal);
+	min-width: 200px;
+	font-size: 0.9em;
+}
+
+.bp-search-input:focus {
+	outline: none;
+	border-color: var(--interactive-accent);
+	box-shadow: 0 0 0 2px var(--interactive-accent-hover);
+}
+
+.bp-search-input::placeholder {
+	color: var(--text-muted);
+}
+
+.bp-active-filters {
+	display: flex;
+	gap: 6px;
+	flex-wrap: wrap;
+	align-items: center;
+	flex: 1;
+}
+
+.bp-clear-filters-btn {
+	padding: 2px 8px;
+	border-radius: 4px;
+	background: transparent;
+	color: var(--text-muted);
+	border: 1px solid var(--background-modifier-border);
+	cursor: pointer;
+	font-size: 0.8em;
+}
+
+.bp-clear-filters-btn:hover {
+	color: var(--text-normal);
+	background: var(--background-modifier-hover);
+}
+
+/* ========== Preset Selector ========== */
+.bp-preset-section {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+	margin-left: auto;
+}
+
+.bp-preset-selector {
+	padding: 4px 8px;
+	border-radius: 4px;
+	border: 1px solid var(--background-modifier-border);
+	background: var(--background-primary);
+	color: var(--text-normal);
+	font-size: 0.9em;
+	cursor: pointer;
+}
+
+.bp-preset-selector:focus {
+	outline: none;
+	border-color: var(--interactive-accent);
+}
+
+.bp-save-preset-btn {
+	padding: 4px 8px;
+	border-radius: 4px;
+	background: transparent;
+	color: var(--text-muted);
+	border: 1px solid var(--background-modifier-border);
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.bp-save-preset-btn:hover {
+	color: var(--text-normal);
+	background: var(--background-modifier-hover);
+}
+
+.bp-save-preset-btn svg {
+	width: 14px;
+	height: 14px;
+}
+
+/* ========== Table Container ========== */
+.bp-table-container {
+	flex: 1;
+	overflow: auto;
+	padding: 0;
+}
+
+/* ========== Table ========== */
+.bp-table {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 0.9em;
+}
+
+.bp-table-header {
+	font-weight: 600;
+	text-align: left;
+	padding: 10px 12px;
+	background: var(--background-secondary);
+	border-bottom: 2px solid var(--background-modifier-border);
+	white-space: nowrap;
+}
+
+.bp-table-header-sortable {
+	cursor: pointer;
+	user-select: none;
+	transition: background-color 0.1s ease;
+}
+
+.bp-table-header-sortable:hover {
+	background: var(--background-modifier-hover);
+}
+
+.bp-table-header-sorted {
+	background: var(--background-secondary-alt);
+}
+
+.bp-table-header-content {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+}
+
+.bp-sort-indicator {
+	display: inline-flex;
+	align-items: center;
+	opacity: 0.4;
+	transition: opacity 0.1s ease;
+}
+
+.bp-sort-indicator svg {
+	width: 14px;
+	height: 14px;
+}
+
+.bp-table-header-sortable:hover .bp-sort-indicator {
+	opacity: 0.7;
+}
+
+.bp-table-header-sorted .bp-sort-indicator {
+	opacity: 1;
+	color: var(--interactive-accent);
+}
+
+/* ========== Column Filter Button ========== */
+.bp-column-filter-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 2px;
+	margin-left: 4px;
+	border-radius: 3px;
+	opacity: 0.4;
+	cursor: pointer;
+	transition: opacity 0.1s ease, background-color 0.1s ease;
+}
+
+.bp-column-filter-btn:hover {
+	opacity: 1;
+	background: var(--background-modifier-hover);
+}
+
+.bp-column-filter-btn svg {
+	width: 12px;
+	height: 12px;
+}
+
+.bp-column-filter-btn.bp-column-filter-active {
+	opacity: 1;
+	color: var(--interactive-accent);
+}
+
+.bp-table-header-sticky {
+	position: sticky;
+	top: 0;
+	z-index: 10;
+	background: var(--background-secondary);
+}
+
+.bp-table-row {
+	cursor: pointer;
+	transition: background-color 0.1s ease;
+}
+
+.bp-table-row:hover {
+	background: var(--background-modifier-hover);
+}
+
+.bp-table-row:nth-child(even) {
+	background: var(--background-secondary-alt);
+}
+
+.bp-table-row:nth-child(even):hover {
+	background: var(--background-modifier-hover);
+}
+
+.bp-table-cell {
+	padding: 8px 12px;
+	border-bottom: 1px solid var(--background-modifier-border);
+	vertical-align: middle;
+}
+
+.bp-table-cell-empty {
+	color: var(--text-faint);
+	font-style: italic;
+}
+
+/* ========== Pagination Bar ========== */
+.bp-pagination-bar {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 16px;
+	padding: 10px 12px;
+	border-bottom: 1px solid var(--background-modifier-border);
+	background: var(--background-primary);
+	flex-wrap: wrap;
+}
+
+.bp-nav-container {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+}
+
+/* When pagination is at bottom (order-3 means after table which is order-2) */
+.bp-pagination-bar.bp-order-3 {
+	border-bottom: none;
+	border-top: 1px solid var(--background-modifier-border);
+}
+
+.bp-page-size-selector {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	color: var(--text-muted);
+	font-size: 0.9em;
+}
+
+.bp-page-size-selector select {
+	padding: 4px 8px;
+	border-radius: 4px;
+	border: 1px solid var(--background-modifier-border);
+	background: var(--background-primary);
+	color: var(--text-normal);
+	cursor: pointer;
+}
+
+.bp-page-size-selector input {
+	padding: 4px 8px;
+	border-radius: 4px;
+	border: 1px solid var(--background-modifier-border);
+	background: var(--background-primary);
+	color: var(--text-normal);
+}
+
+.bp-pagination-btn {
+	padding: 4px 8px;
+	border-radius: 4px;
+	background: var(--interactive-normal);
+	color: var(--text-normal);
+	border: 1px solid var(--background-modifier-border);
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: background-color 0.1s ease;
+}
+
+.bp-pagination-btn:hover:not(:disabled) {
+	background: var(--interactive-hover);
+}
+
+.bp-pagination-btn:disabled,
+.bp-pagination-btn-disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+.bp-pagination-btn svg {
+	width: 16px;
+	height: 16px;
+}
+
+.bp-page-info {
+	color: var(--text-normal);
+	font-size: 0.9em;
+	margin: 0 8px;
+	white-space: nowrap;
+}
+
+.bp-item-info {
+	color: var(--text-muted);
+	font-size: 0.85em;
+	white-space: nowrap;
+}
+
+/* ========== Empty State ========== */
+.bp-empty-state {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 40px;
+	color: var(--text-muted);
+	font-style: italic;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 600px) {
+	.bp-filter-bar {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	.bp-search-input {
+		width: 100%;
+		min-width: unset;
+	}
+
+	.bp-preset-section {
+		margin-left: 0;
+		margin-top: 8px;
+	}
+
+	.bp-pagination-bar {
+		flex-direction: column;
+		gap: 8px;
+	}
+}
+
+/* ========== Dark Theme Adjustments ========== */
+.theme-dark .bp-table-row:nth-child(even) {
+	background: rgba(0, 0, 0, 0.1);
+}
+
+.theme-dark .bp-table-row:nth-child(even):hover {
+	background: var(--background-modifier-hover);
+}
+
+/* ========== Preset Name Input ========== */
+.bp-preset-name-input {
+	padding: 4px 8px;
+	border-radius: 4px;
+	border: 1px solid var(--interactive-accent);
+	background: var(--background-primary);
+	color: var(--text-normal);
+	font-size: 0.9em;
+	width: 120px;
+	margin-left: 4px;
+}
+
+.bp-preset-name-input:focus {
+	outline: none;
+	box-shadow: 0 0 0 2px var(--interactive-accent-hover);
+}
+
+/* ========== Custom Page Size Input ========== */
+.bp-custom-page-size-input {
+	padding: 4px 8px;
+	border-radius: 4px;
+	border: 1px solid var(--background-modifier-border);
+	background: var(--background-primary);
+	color: var(--text-normal);
+	width: 80px;
+	margin-left: 8px;
+}
+
+/* ========== Layout Order ========== */
+.bp-order-1 {
+	order: 1;
+}
+
+.bp-order-2 {
+	order: 2;
+}
+
+.bp-order-3 {
+	order: 3;
+}
+
+/* ========== Utility ========== */
+.bp-hidden {
+	display: none !important;
+}

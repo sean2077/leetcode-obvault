@@ -64,11 +64,8 @@
 **方式二：集成到已有仓库**
 
 1. 复制 `leetcode/` 文件夹到你的仓库
-2. 修改所有主题文件中的脚本路径（如 `leetcode/lc-topic/*.md`）：
-   - 将 `leetcode/dv_pagingTable` 改为你的实际脚本路径
-   - 例如：`Yourleetcode/dv_pagingTable`
-3. 安装所需的 Obsidian 插件:
-   - [Dataview](https://github.com/blacksmithgu/obsidian-dataview)（必需）
+2. 安装所需的 Obsidian 插件:
+   - [Bases Paginator](https://github.com/sean2077/obsidian-bases-paginator)（必需）
    - [Tabs](https://github.com/xhuajin/obsidian-tabs)（必需）
    - (可选) 其他你喜欢的插件
 
@@ -83,11 +80,7 @@
   pip install typer rich natsort
   ```
 
-### 使用方法
-
-**浏览题目**
-- 进入 `leetcode/lc-problems/` 查看单个题目卡片
-- 查看 `leetcode/lc-topic/` 按主题分类的题目
+详见下节。
 
 ## 🛠️ 生成题目卡片
 

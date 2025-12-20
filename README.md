@@ -64,11 +64,8 @@ Just want to use the vault? Only Obsidian is required!
 **Option 2: Integrate into your vault**
 
 1. Copy the `leetcode/` folder to your vault
-2. Update the script path in all topic files (e.g., `leetcode/lc-topic/*.md`):
-   - Change `leetcode/dv_pagingTable` to your actual script path
-   - Example: `Yourleetcode/dv_pagingTable`
-3. Install required Obsidian plugins:
-   - [Dataview](https://github.com/blacksmithgu/obsidian-dataview) (Required)
+2. Install required Obsidian plugins:
+   - [Bases Paginator](https://github.com/sean2077/obsidian-bases-paginator) (Required)
    - [Tabs](https://github.com/xhuajin/obsidian-tabs) (Required)
    - (Optional) Other plugins you prefer
 
@@ -83,11 +80,7 @@ Need to generate/update problem cards?
   pip install typer rich natsort
   ```
 
-### Usage
-
-**Browse problems**
-- Navigate to `leetcode/lc-problems/` for individual problem cards
-- Check `leetcode/lc-topic/` for topic-based organization
+See the next section for details.
 
 ## 🛠️ Generating Problem Cards
 
