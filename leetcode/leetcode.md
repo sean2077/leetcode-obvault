@@ -12,6 +12,9 @@ cssclasses:
 views:
   - type: paginated-table
     name: LeetCode Problems
+    filters:
+      and:
+        - file.tags.contains("leetcode/problem")
     order:
       - file.name
       - title
