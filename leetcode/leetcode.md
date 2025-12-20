@@ -32,5 +32,6 @@ views:
       - note.lcTopics
       - note.lcDifficulty
       - note.grade
+    filterPresets: "[]"
 
 ```

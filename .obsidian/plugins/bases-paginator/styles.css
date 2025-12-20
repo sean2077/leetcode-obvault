@@ -203,7 +203,8 @@
 	color: var(--interactive-accent);
 }
 
-.bp-table-header-sticky {
+/* Sticky header - applied to th elements via parent thead class */
+.bp-table-header-sticky .bp-table-header {
 	position: sticky;
 	top: 0;
 	z-index: 10;
