@@ -239,6 +239,66 @@
 	font-style: italic;
 }
 
+/* ========== List Rendering ========== */
+.bp-table-cell-list {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+}
+
+.bp-table-cell-list-item {
+	display: flex;
+	align-items: flex-start;
+	line-height: 1.4;
+}
+
+.bp-table-cell-list-bullet {
+	color: var(--text-muted);
+	margin-right: 6px;
+	flex-shrink: 0;
+}
+
+/* Ensure links in list items look correct */
+.bp-table-cell-list-item .internal-link {
+	color: var(--link-color);
+	text-decoration: none;
+}
+
+.bp-table-cell-list-item .internal-link:hover {
+	text-decoration: underline;
+}
+
+/* ========== Column Drag-to-Reorder ========== */
+.bp-table-header-draggable {
+	cursor: grab;
+	position: relative;
+}
+
+.bp-table-header-draggable:active {
+	cursor: grabbing;
+}
+
+.bp-table-header-dragging {
+	opacity: 0.5;
+	background: var(--background-secondary-alt) !important;
+}
+
+.bp-table-header-drag-over {
+	background: var(--background-modifier-hover) !important;
+}
+
+/* Visual drop indicator */
+.bp-table-header-drag-over::before {
+	content: '';
+	position: absolute;
+	left: -2px;
+	top: 0;
+	bottom: 0;
+	width: 4px;
+	background: var(--interactive-accent);
+	border-radius: 2px;
+}
+
 /* ========== Pagination Bar ========== */
 .bp-pagination-bar {
 	display: flex;
