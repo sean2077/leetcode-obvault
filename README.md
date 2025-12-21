@@ -11,7 +11,7 @@ English | [简体中文](README-CN.md)
 - 📝 **Bilingual Support**: English and Chinese problem descriptions
 - 🏷️ **Rich Metadata**: Topics, difficulty, acceptance rate, similar problems
 - 🔗 **Smart Navigation**: Previous/Next problem links for sequential learning
-- 📊 **Interactive Tables**: Dataview-powered problem lists and statistics
+- 📊 **Interactive Tables**: Bases-powered problem lists and statistics
 - 🎯 **Topic Organization**: Organized by algorithm topics and patterns
 - ⭐ **Quality Ratings**: Problem ratings based on community feedback
 
@@ -128,7 +128,6 @@ leetcode-obvault/
 ├── .tools/                    # Generation scripts
 │   └── generate_leetcode_cards.py
 ├── leetcode/
-│   ├── _scripts/             # Dataview scripts
 │   ├── lc-problems/          # Problem cards
 │   ├── lc-topic/             # Topic pages
 │   └── lc-favorite/          # Favorite collections
