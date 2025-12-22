@@ -33,5 +33,7 @@ views:
       - note.lcDifficulty
       - note.grade
     filterPresets: "[]"
+    pageSize: "25"
+    listRenderMode: comma
 
 ```
