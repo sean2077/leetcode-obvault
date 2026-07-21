@@ -1,4 +1,5 @@
 {
+  "credentialStorageVersion": 1,
   "enabled": true,
   "statusBarEnabled": true,
   "blurDepth": 0,
@@ -159,7 +160,5 @@
       },
       "endpoints": {}
     }
-  ],
-  "bgColor": "#1f1e1e",
-  "bgColorOpacity": 0.32
+  ]
 }
